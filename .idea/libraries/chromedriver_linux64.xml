@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="chromedriver_linux64">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/../../../../Quality Assurance (QA)/files/ChromeDriver/chromedriver_linux64.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../Quality Assurance (QA)/files/ChromeDriver/chromedriver_linux64.zip!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../Quality Assurance (QA)/files/ChromeDriver/chromedriver_linux64.zip!/" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="jar://$PROJECT_DIR$/../../../../Quality Assurance (QA)/files/ChromeDriver/chromedriver_linux64.zip!/" />
+    </NATIVE>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../Quality Assurance (QA)/files/ChromeDriver/chromedriver_linux64.zip!/" />
+    </SOURCES>
+    <jarDirectory url="jar://$PROJECT_DIR$/../../../../Quality Assurance (QA)/files/ChromeDriver/chromedriver_linux64.zip!/" recursive="false" />
+    <jarDirectory url="jar://$PROJECT_DIR$/../../../../Quality Assurance (QA)/files/ChromeDriver/chromedriver_linux64.zip!/" recursive="false" type="SOURCES" />
+  </library>
+</component>
