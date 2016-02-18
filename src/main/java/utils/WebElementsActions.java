@@ -3,7 +3,10 @@ package utils;
 import exception.AlertException;
 import exception.ElementNoSuch;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.*;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,14 +14,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.IOException;
 import java.util.List;
 
-import static utils.PropertyLoader.*;
-
 /**
  * @see {@link utils.WebInterface}
  */
 public class WebElementsActions implements WebInterface {
 
-    private final static Logger log = Logger.getLogger(WebElementsActions.class);
+    private final static Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
     private static WebDriverWait driverWait;
     private ConfigurationData config;
     private WebDriverWrapper driverWrapper;
@@ -26,7 +27,7 @@ public class WebElementsActions implements WebInterface {
     public WebElementsActions(WebDriverWrapper driverWrapper) {
 
         this.driverWrapper = driverWrapper;
-        driverWait = new WebDriverWait(driverWrapper, Long.parseLong(loadProperty("wait.timeout")));
+        driverWait = new WebDriverWait(driverWrapper, 10);
         config = ConfigurationData.getConfigurationData();
 
     }
@@ -174,7 +175,7 @@ public class WebElementsActions implements WebInterface {
     public void moveToElement(String moveToLocator) throws ElementNoSuch {
 
         WebElement webElement = driverWrapper.findElement(config.getLocator(moveToLocator));
-        Actions actions = new Actions(driverWrapper);
+        Actions actions = new Actions(driverWrapper.getOriginalDriver());
 
         actions.moveToElement(webElement);
         log.info(String.format("move to element < %s >", moveToLocator));
@@ -193,7 +194,7 @@ public class WebElementsActions implements WebInterface {
     public void moveToElementAndClick(String moveToLocator, String clickToElement) throws ElementNoSuch {
 
         WebElement webElement = driverWrapper.findElement(config.getLocator(moveToLocator));
-        Actions actions = new Actions(driverWrapper);
+        Actions actions = new Actions(driverWrapper.getOriginalDriver());
 
         actions.moveToElement(webElement);
         log.info(String.format("move to element < %s >", moveToLocator));
@@ -285,7 +286,7 @@ public class WebElementsActions implements WebInterface {
         } catch (AlertException e) {
 
             e.printStackTrace();
-            log.error(String.format("alert is not found. NoAlertPresentException < %s >", e.getStackTrace()));
+            log.error(String.format("alert is not found. NoAlertPresentException < %s >", e.getMessage()));
             return isAlertPresent;
 
         }
@@ -315,7 +316,7 @@ public class WebElementsActions implements WebInterface {
         } catch (AlertException e) {
 
             alertText = "alert is not found";
-            log.error(String.format("< %s > . NoAlertPresentException < %s >", e.getStackTrace()));
+            log.error(String.format("< %s > . NoAlertPresentException < %s >", alertText, e.getMessage()));
             e.printStackTrace();
 
         }
@@ -456,7 +457,7 @@ public class WebElementsActions implements WebInterface {
      *
      * @param elementLocator search element locator
      * @return elements {@link List<WebElement>} driver find elements from
-     * configuration {@link WebElementsActions#CONFIGURATION}
+     * configuration {@link WebElementsActions#config}
      * @throws ElementNoSuch If the locator cannot found
      */
     @Override
@@ -506,7 +507,7 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void windowScroll() {
 
-        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driverWrapper;
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driverWrapper.getOriginalDriver();
         // Vertical scroll - down by 100  pixels
         javascriptExecutor.executeScript("window.scrollBy(0,100)", "");
 
