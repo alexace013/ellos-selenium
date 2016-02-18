@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.IOException;
 import java.util.List;
 
+import static utils.PropertyLoader.*;
+
 /**
  * @see {@link utils.WebInterface}
  */
@@ -24,7 +26,7 @@ public class WebElementsActions implements WebInterface {
     public WebElementsActions(WebDriverWrapper driverWrapper) {
 
         this.driverWrapper = driverWrapper;
-        driverWait = new WebDriverWait(driverWrapper, 10);
+        driverWait = new WebDriverWait(driverWrapper, Long.parseLong(loadProperty("wait.timeout")));
         config = ConfigurationData.getConfigurationData();
 
     }

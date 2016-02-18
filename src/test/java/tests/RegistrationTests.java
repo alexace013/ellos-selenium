@@ -3,16 +3,15 @@ package tests;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import random.RandomUserDataProviders;
 import utils.ClassNameUtil;
 import utils.PropertyLoader;
-
-import java.util.Random;
 
 public class RegistrationTests extends Fixture {
 
     private static final Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
     private static final String PASS = PropertyLoader.loadProperty("user.new.PASS");
-    private static final String EMAIL = PropertyLoader.loadProperty("user.new.EMAIL"+ new Random().nextInt());
+    private static final String EMAIL = RandomUserDataProviders.randomEmail();
 //    private static final String EMAIL = RandomUser.randomEmail();
 
     // all fields are filled in correctly
@@ -39,8 +38,8 @@ public class RegistrationTests extends Fixture {
             ellos.registrationPage.clickAndInputPassMainAndClickTAB(PASS);
             log.info(String.format("click and input %s in password field and click TAB", PASS));
 
-            //getRegistrationPage().clickAndInputPassRepeat(PASS);
-            ellos.registrationPage.clickAndInputPassRepeatTest(PASS);
+            ellos.registrationPage.clickAndInputPassRepeat(PASS);
+//            ellos.registrationPage.clickAndInputPassRepeatTest(PASS);
             log.info(String.format("click and input %s password field repeat", PASS));
 
             ellos.registrationPage.clickButtonRegistration();
@@ -50,7 +49,8 @@ public class RegistrationTests extends Fixture {
 
         Assert.assertTrue(ellos.registrationPage.isRegistrationSuccessful(),
                 "registration is successful");
-//        getHomePage().clickLogoutLink();
+
+        ellos.homePage.clickLogoutLink();
 //        log.info(String.format("click logout link"));
         // TODO Felaktig erbjudandekod what is this? (#offerCodeError)
 
@@ -85,8 +85,8 @@ public class RegistrationTests extends Fixture {
             ellos.registrationPage.clickAndInputPassRepeat(emptyStr);
             log.info(String.format("click and input %s password field repeat", emptyStr));
 
-            ellos.registrationPage.windowScroll();
-            log.info(String.format("window scroll"));
+//            ellos.registrationPage.windowScroll();
+//            log.info(String.format("window scroll"));
 
             ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
@@ -125,8 +125,8 @@ public class RegistrationTests extends Fixture {
             ellos.registrationPage.clickAndInputPassRepeat(emptyStr);
             log.info(String.format("click and input %s password field repeat", emptyStr));
 
-            ellos.registrationPage.windowScroll();
-            log.info(String.format("window scroll"));
+//            ellos.registrationPage.windowScroll();
+//            log.info(String.format("window scroll"));
 
             ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
@@ -166,8 +166,8 @@ public class RegistrationTests extends Fixture {
             ellos.registrationPage.clickAndInputPassRepeat(emptyStr);
             log.info(String.format("click and input %s password field repeat", emptyStr));
 
-            ellos.registrationPage.windowScroll();
-            log.info(String.format("window scroll"));
+//            ellos.registrationPage.windowScroll();
+//            log.info(String.format("window scroll"));
 
             ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
@@ -207,8 +207,8 @@ public class RegistrationTests extends Fixture {
             ellos.registrationPage.clickAndInputPassRepeat(PASS);
             log.info(String.format("click and input %s password field repeat", PASS));
 
-            ellos.registrationPage.windowScroll();
-            log.info(String.format("window scroll"));
+//            ellos.registrationPage.windowScroll();
+//            log.info(String.format("window scroll"));
 
             ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
@@ -248,8 +248,8 @@ public class RegistrationTests extends Fixture {
             ellos.registrationPage.clickAndInputPassRepeat(emptyStr);
             log.info(String.format("click and input %s password field repeat", emptyStr));
 
-            ellos.registrationPage.windowScroll();
-            log.info(String.format("window scroll"));
+//            ellos.registrationPage.windowScroll();
+//            log.info(String.format("window scroll"));
 
             ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
@@ -289,8 +289,8 @@ public class RegistrationTests extends Fixture {
             ellos.registrationPage.clickAndInputPassRepeat(PASS);
             log.info(String.format("click and input %s password field repeat", PASS));
 
-            ellos.registrationPage.windowScroll();
-            log.info(String.format("window scroll"));
+//            ellos.registrationPage.windowScroll();
+//            log.info(String.format("window scroll"));
 
             ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
@@ -330,8 +330,8 @@ public class RegistrationTests extends Fixture {
             ellos.registrationPage.clickAndInputPassRepeat(PASS);
             log.info(String.format("click and input %s password field repeat", PASS));
 
-            ellos.registrationPage.windowScroll();
-            log.info(String.format("window scroll"));
+//            ellos.registrationPage.windowScroll();
+//            log.info(String.format("window scroll"));
 
             ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
@@ -371,8 +371,8 @@ public class RegistrationTests extends Fixture {
             ellos.registrationPage.clickAndInputPassRepeat(emptyStr);
             log.info(String.format("click and input %s password field repeat", emptyStr));
 
-            ellos.registrationPage.windowScroll();
-            log.info(String.format("window scroll"));
+//            ellos.registrationPage.windowScroll();
+//            log.info(String.format("window scroll"));
 
             ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
@@ -412,8 +412,8 @@ public class RegistrationTests extends Fixture {
             ellos.registrationPage.clickAndInputPassRepeat(PASS);
             log.info(String.format("click and input %s password field repeat", PASS));
 
-            ellos.registrationPage.windowScroll();
-            log.info(String.format("window scroll"));
+//            ellos.registrationPage.windowScroll();
+//            log.info(String.format("window scroll"));
 
             ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
@@ -453,8 +453,8 @@ public class RegistrationTests extends Fixture {
             ellos.registrationPage.clickAndInputPassRepeat(PASS);
             log.info(String.format("click and input %s password field repeat", PASS));
 
-            ellos.registrationPage.windowScroll();
-            log.info(String.format("window scroll"));
+//            ellos.registrationPage.windowScroll();
+//            log.info(String.format("window scroll"));
 
             ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
@@ -492,8 +492,8 @@ public class RegistrationTests extends Fixture {
             ellos.registrationPage.clickAndInputPassRepeat(PASS);
             log.info(String.format("click and input %s password field repeat", PASS));
 
-            ellos.registrationPage.windowScroll();
-            log.info(String.format("window scroll"));
+//            ellos.registrationPage.windowScroll();
+//            log.info(String.format("window scroll"));
 
             ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
@@ -531,8 +531,8 @@ public class RegistrationTests extends Fixture {
             ellos.registrationPage.clickAndInputPassRepeat(PASS + 1);
             log.info(String.format("click and input %s password field repeat", PASS + 1));
 
-            ellos.registrationPage.windowScroll();
-            log.info(String.format("window scroll"));
+//            ellos.registrationPage.windowScroll();
+//            log.info(String.format("window scroll"));
 
             ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));

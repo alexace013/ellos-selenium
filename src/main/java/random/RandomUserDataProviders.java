@@ -1,9 +1,9 @@
 package random;
 
 import org.testng.annotations.DataProvider;
+import utils.PropertyLoader;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
@@ -18,7 +18,7 @@ public class RandomUserDataProviders {
     @DataProvider
     public static String randomEmail() {
 
-        data.add(new String[]{"test_user-" + generateRandomName() + generateDomaine()});
+        data.add(new String[]{PropertyLoader.loadProperty("user.new.EMAIL") + generateRandomName() + generateDomaine()});
 
         String user = null;
 

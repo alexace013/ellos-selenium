@@ -1,0 +1,110 @@
+@startuml
+top to bottom direction
+skinparam headerFontSize 30
+skinparam headerFontStyle bold
+skinparam classAttributeIconSize 0
+scale 1.0
+package exception {
+class exception.FileException << (E,yellow) >>  {
+.. Fields  ..
+.. Static ..
+- {static} EXCEPTION_NAME : String
+}
+class exception.PropertiesNoLoad {
+.. Fields  ..
+.. Static ..
+- {static} EXCEPTION_NAME : String
+}
+class exception.ElementNoSuch {
+.. Fields  ..
+.. Static ..
+- {static} EXCEPTION_NAME : String
+}
+
+}
+package pages {
+class pages.Ellos {
+.. Fields  ..
++checkoutPage : CheckoutPage
++homePage : HomePage
++loginPage : LoginPage
++productPage : ProductPage
++registrationPage : RegistrationPage
++web : WebElementsActions
+}
+
+}
+package random {
+class random.DataProviders {
+.. Methods ..
+.. Static ..
++ {static} loadUsersFromFile() : Iterator
+}
+class random.RandomUser {
+.. Methods ..
+.. Static ..
++ {static} randomEmail() : String
+- {static} randomDomaine() : String
+}
+class random.RandomUserDataProviders {
+.. Fields  ..
+.. Methods ..
+.. Static ..
++ {static} randomEmail() : String
+- {static} data : List
+- {static} generateDomaine() : String
+- {static} generateRandomName() : Integer
+}
+class random.ParametrizedUsers {
+.. Methods ..
+-generateRandomName() : Object
+-generateRandomPassword() : Object
++test0(String, String) : void
++users() : Iterator
+}
+
+}
+package utils {
+class utils.PropertyLoader {
+.. Fields  ..
+.. Methods ..
+.. Static ..
++ {static} loadProperty() : String
+- {static} PROPERTY_FILE : String
+- {static} loadData() : void
+- {static} propertiesMap : Map
+}
+class utils.PrintScreen {
+.. Methods ..
++printScreenPage() : void
+}
+interface utils.FileProperties  <<Annotation>>  {
+.. Methods ..
++ {abstract} properties() : boolean
++ {abstract} xml() : boolean
+}
+class utils.ClassNameUtil {
+.. Methods ..
+.. Static ..
++ {static} getCurrentClassName() : String
+}
+
+}
+tests.Fixture <|-- tests.LoginTests
+tests.Fixture <|-- tests.ProductPageTests
+pages.Page <|-- pages.RegistrationPage
+pages.Page <|-- pages.HomePage
+pages.Ellos o-- "1..1" utils.WebElementsActions
+pages.Ellos o-- "1..1" pages.HomePage
+pages.Ellos o-- "1..1" pages.LoginPage
+pages.Ellos o-- "1..1" pages.ProductPage
+pages.Ellos o-- "1..1" pages.CheckoutPage
+pages.Ellos o-- "1..1" pages.RegistrationPage
+tests.Fixture <|-- tests.RegistrationTests
+tests.Fixture <|-- tests.ProductAddToBasketTests
+pages.Page <|-- pages.CheckoutPage
+pages.Page <|-- pages.ProductPage
+utils.WebInterface <|.. utils.WebElementsActions
+pages.Page <|-- pages.LoginPage
+tests.Fixture <|-- tests.CheckOutTests
+@enduml
