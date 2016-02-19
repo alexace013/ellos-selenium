@@ -500,16 +500,29 @@ public class WebElementsActions implements WebInterface {
     }
 
     /**
-     * Scroll a window
+     * Scroll a window in down
      *
      * @see {@link JavascriptExecutor} and {@link JavascriptExecutor#executeScript(String, Object...)}
      */
     @Override
-    public void windowScroll() {
+    public void windowScrollDown() {
 
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driverWrapper.getOriginalDriver();
-        // Vertical scroll - down by 100  pixels
-        javascriptExecutor.executeScript("window.scrollBy(0,100)", "");
+        // Vertical scroll - down by 200  pixels
+        javascriptExecutor.executeScript("window.scrollBy(0,200)", "");
+
+    }
+
+    /**
+     * Scroll a window in up
+     *
+     * @see {@link JavascriptExecutor} and {@link JavascriptExecutor#executeScript(String, Object...)}
+     */
+    public void windowScrollUp() {
+
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driverWrapper.getOriginalDriver();
+        // Vertical scroll - up by -200  pixels
+        javascriptExecutor.executeScript("window.scrollBy(0,-200)", "");
 
     }
 

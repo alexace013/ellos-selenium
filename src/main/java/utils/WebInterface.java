@@ -62,7 +62,7 @@ public interface WebInterface {
 
     void pressSpace(String locator) throws ElementNoSuch;
 
-    void windowScroll();
+    void windowScrollDown();
 
 
 }

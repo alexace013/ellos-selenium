@@ -156,11 +156,20 @@ public class RegistrationPage extends Page {
     }
 
     /**
-     * This method scroll you window
+     * This method scroll you window in down
      */
-    public void windowScroll() {
+    public void regPageScrollDown() {
 
-        web.windowScroll();
+        web.windowScrollDown();
+
+    }
+
+    /**
+     * This method scroll you window in up
+     */
+    public void regPageScrollUp() {
+
+        web.windowScrollUp();
 
     }
 
@@ -179,6 +188,29 @@ public class RegistrationPage extends Page {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
+    }
+
+    public void closeHelpBox() {
+
+        if (web.isElementPresent("helpRegWindow")) {
+
+            try {
+
+                web.clickElement("closeHelpRegWindow");
+
+            } catch (ElementNoSuch e) {
+
+                e.printStackTrace();
+                log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+            }
+
+        } else {
+
+            log.info(String.format("help window no present"));
 
         }
 
@@ -390,10 +422,25 @@ public class RegistrationPage extends Page {
 
     }
 
+    public void switchToHomePage() {
+
+        try {
+
+            web.moveToElementAndClick("ellosLink", "ellosLink");
+
+        } catch (ElementNoSuch e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
+    }
+
     /**
      * Refresh the home page
      */
-    public void refreshHomePage() {
+    public void refreshRegistrationPage() {
         web.refreshPage();
     }
 

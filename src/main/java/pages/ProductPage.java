@@ -239,7 +239,7 @@ public class ProductPage extends Page {
 
         try {
 
-            web.windowScroll();
+            web.windowScrollDown();
             web.clickElement("addProductToPage");
 
         } catch (ElementNoSuch e) {
@@ -262,7 +262,7 @@ public class ProductPage extends Page {
         // this cycle down the page to the desired element
         for (int i = 0; i < 3; i++) {
 
-            web.windowScroll();
+            web.windowScrollDown();
 
         }
 
@@ -273,23 +273,6 @@ public class ProductPage extends Page {
             if (web.waitForElementPresent("isInspirationElementPresent")) {
 
                 log.info(String.format("correct page"));
-
-                /**
-                 * It is used to confirm that exactly on the correct page.
-                 * You should fall on the page {@see http://www.ellos.se/inspiration/svavande-gronska/1542}
-                 * @param name this person's name, as referred on page
-                 * */
-                String name = "Alexandra Ogonowski";
-
-                if (web.isElementPresent("isInspirationElementPresent")) {
-
-                    log.info(String.format("you know who are %s.", name));
-
-                } else {
-
-                    log.info(String.format("you didn't know who are %s.", name));
-
-                }
 
             } else {
 
@@ -410,7 +393,7 @@ public class ProductPage extends Page {
 
         try {
 
-            web.windowScroll();
+            web.windowScrollDown();
 
             web.moveToElementAndClick("colorMenuLink", "colorMenuLink");
 
@@ -429,7 +412,7 @@ public class ProductPage extends Page {
 
         try {
 
-            web.windowScroll();
+            web.windowScrollDown();
 
             web.moveToElementAndClick("sizeMenuLink", "sizeMenuLink");
 

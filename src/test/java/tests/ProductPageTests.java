@@ -10,7 +10,7 @@ public class ProductPageTests extends Fixture {
     private static final Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
 
     // test woman product page
-    @Test(priority = 1)
+    @Test(priority = 1, enabled = true)
     public void test1_womanProductPage() {
 
         {
@@ -35,7 +35,7 @@ public class ProductPageTests extends Fixture {
     }
 
     // test man product page
-    @Test(priority = 2)
+    @Test(priority = 2, enabled = true)
     public void test2_manProductPage() {
 
         ellos.homePage.switchToManPage();
@@ -55,7 +55,7 @@ public class ProductPageTests extends Fixture {
     }
 
     // test barn product page
-    @Test(priority = 3)
+    @Test(priority = 3, enabled = true)
     public void test3_barnProductPage() {
 
         ellos.homePage.switchToChildPage();
@@ -75,7 +75,7 @@ public class ProductPageTests extends Fixture {
     }
 
     // test sport product page
-    @Test(priority = 4)
+    @Test(priority = 4, enabled = true)
     public void test4_sportProductPage() {
 
         ellos.homePage.switchToSportPage();
@@ -95,7 +95,7 @@ public class ProductPageTests extends Fixture {
     }
 
     // test linen and bath product page
-    @Test(priority = 5)
+    @Test(priority = 5, enabled = true)
     public void test5_linenAndBathPage() {
 
         ellos.homePage.switchToLinenAndBathPage();
@@ -115,7 +115,7 @@ public class ProductPageTests extends Fixture {
     }
 
     // test footwear product page
-    @Test(priority = 6)
+    @Test(priority = 6, enabled = true)
     public void test6_footwearPage() {
 
         ellos.homePage.switchToFootwearPage();
@@ -135,7 +135,7 @@ public class ProductPageTests extends Fixture {
     }
 
     // test hem product page
-    @Test(priority = 7)
+    @Test(priority = 7, enabled = true)
     public void test7_hemPage() {
 
         ellos.homePage.switchToHemPage();
@@ -155,7 +155,7 @@ public class ProductPageTests extends Fixture {
     }
 
     // test electronic product page
-    @Test(priority = 8)
+    @Test(priority = 8, enabled = true)
     public void test8_electronicPage() {
 
         ellos.homePage.switchToElectronicPage();
@@ -175,7 +175,7 @@ public class ProductPageTests extends Fixture {
     }
 
     // test beauty and health product page
-    @Test(priority = 9)
+    @Test(priority = 9, enabled = true)
     public void test9_beautyAndHealthPage() {
 
         ellos.homePage.switchToBeautyAndHealthPage();
@@ -195,7 +195,7 @@ public class ProductPageTests extends Fixture {
     }
 
     // test plus product page
-    @Test(priority = 10)
+    @Test(priority = 10, enabled = true)
     public void test10_plusPage() {
 
         ellos.homePage.switchToPlusPage();
@@ -215,7 +215,7 @@ public class ProductPageTests extends Fixture {
     }
 
     // test rea product page
-    @Test(priority = 11)
+    @Test(priority = 11, enabled = true)
     public void test11_reaPage() {
 
         ellos.homePage.switchToREAPage();
@@ -236,7 +236,7 @@ public class ProductPageTests extends Fixture {
     }
 
     // test inspiration product page
-    @Test(priority = 12)
+    @Test(priority = 12, enabled = true)
     public void test12_inspirationPage() {
 
         ellos.homePage.switchToInspirationPage();
@@ -250,7 +250,7 @@ public class ProductPageTests extends Fixture {
     }
 
     // test resor product page
-    @Test(priority = 13)
+    @Test(priority = 13, enabled = true)
     public void test13_resorPage() {
 
         ellos.homePage.switchToResorPage();

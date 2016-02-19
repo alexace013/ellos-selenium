@@ -182,7 +182,7 @@ public class HomePage extends Page {
             if (web.waitForElementPresent("barnNavigationLink")) {
 
                 // this method is used because it is not visible element on next page
-                web.windowScroll();
+                web.windowScrollDown();
 
                 log.info(String.format("switch to barn page was correct"));
 
@@ -217,7 +217,7 @@ public class HomePage extends Page {
             if (web.waitForElementPresent("sportNavigationLink")) {
 
                 // this method is used because it is not visible element on next page
-                web.windowScroll();
+                web.windowScrollDown();
 
                 log.info(String.format("switch to sport page was correct"));
 
@@ -252,7 +252,7 @@ public class HomePage extends Page {
             if (web.waitForElementPresent("linen&bathNavigationLink")) {
 
                 // this method is used because it is not visible element on next page
-                web.windowScroll();
+                web.windowScrollDown();
 
                 log.info(String.format("switch to linen and bath page was correct"));
 
@@ -470,6 +470,8 @@ public class HomePage extends Page {
         try {
 
             web.moveToElementAndClick("inspirationMenu", "inspirationMenuLink");
+
+            web.windowScrollDown();
 
             if (web.waitForElementPresent("inspirationNavigationLink")) {
 

@@ -31,7 +31,7 @@ public class CheckoutPage extends Page {
 
         try {
 
-            web.windowScroll();
+            web.windowScrollDown();
             web.moveToElementAndClick("buttonCheckout", "buttonCheckout");
 
         } catch (ElementNoSuch e) {
@@ -119,7 +119,7 @@ public class CheckoutPage extends Page {
      */
     public void inputFirstName(String name) throws ElementNoSuch {
 
-        web.windowScroll();
+        web.windowScrollDown();
         web.moveToElementAndClick("registerCustomerFieldFirstName", "registerCustomerFieldFirstName");
         web.input("registerCustomerFieldFirstName", name);
 
@@ -134,7 +134,7 @@ public class CheckoutPage extends Page {
      */
     public void inputLastName(String name) throws ElementNoSuch {
 
-        web.windowScroll();
+        web.windowScrollDown();
         web.moveToElementAndClick("registerCustomerFieldLastName", "registerCustomerFieldLastName");
         web.input("registerCustomerFieldLastName", name);
 
@@ -177,7 +177,7 @@ public class CheckoutPage extends Page {
      */
     public void inputZipCode(String address) throws ElementNoSuch {
 
-        web.windowScroll();
+        web.windowScrollDown();
         web.moveToElementAndClick("registerCustomerFieldPostCode", "registerCustomerFieldPostCode");
         web.input("registerCustomerFieldPostCode", address);
 
@@ -192,7 +192,7 @@ public class CheckoutPage extends Page {
      */
     public void inputCity(String city) throws ElementNoSuch {
 
-        web.windowScroll();
+        web.windowScrollDown();
         web.moveToElementAndClick("registerCustomerFieldCity", "registerCustomerFieldCity");
         web.input("registerCustomerFieldCity", city);
 
