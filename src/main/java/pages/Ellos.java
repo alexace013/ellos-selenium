@@ -1,11 +1,9 @@
 package pages;
 
 import utils.WebDriverWrapper;
-import utils.WebElementsActions;
 
 public class Ellos {
 
-    public WebElementsActions web;
     public HomePage homePage;
     public LoginPage loginPage;
     public ProductPage productPage;
@@ -16,8 +14,6 @@ public class Ellos {
 //    public Mock mock;
 
     public Ellos(WebDriverWrapper driverWrapper) {
-
-        web = new WebElementsActions(driverWrapper);
 
         homePage = new HomePage(driverWrapper);
         loginPage = new LoginPage(driverWrapper);
