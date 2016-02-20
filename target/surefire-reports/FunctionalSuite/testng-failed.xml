@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [FunctionalSuite]">
+  <test name="Functional(failed)">
+    <classes>
+      <class name="tests.ProductPageTests">
+        <methods>
+          <include name="test11_reaPage"/>
+          <include name="test4_sportProductPage"/>
+          <include name="test6_footwearPage"/>
+          <include name="test10_plusPage"/>
+          <include name="test13_resorPage"/>
+          <include name="test9_beautyAndHealthPage"/>
+          <include name="test2_manProductPage"/>
+          <include name="test7_hemPage"/>
+          <include name="quitBrowser"/>
+          <include name="test8_electronicPage"/>
+          <include name="test5_linenAndBathPage"/>
+          <include name="test1_womanProductPage"/>
+          <include name="test12_inspirationPage"/>
+          <include name="test3_barnProductPage"/>
+          <include name="startBrowser"/>
+        </methods>
+      </class> <!-- tests.ProductPageTests -->
+      <class name="tests.RegistrationTests">
+        <methods>
+          <include name="test10_negativeFirstEmailFieldEmpty"/>
+          <include name="test4_negativeOnlyFirstPassField"/>
+          <include name="test11_negativeSecondEmailFieldEmpty"/>
+          <include name="test5_negativeOnlySecondPassField"/>
+          <include name="test7_negativeOnlyPassFields"/>
+          <include name="test1_positiveRegistration"/>
+          <include name="test3_negativeOnlySecondEmailField"/>
+          <include name="test8_negativeFirstPassFieldEmpty"/>
+          <include name="test13_negativeVariousPassFields"/>
+          <include name="test12_negativeVariousEmailAddress"/>
+          <include name="test9_negativeSecondPassFieldEmpty"/>
+          <include name="test6_negativeOnlyEmailFields"/>
+          <include name="test2_negativeOnlyFirstEmailField"/>
+        </methods>
+      </class> <!-- tests.RegistrationTests -->
+      <class name="tests.LoginTests">
+        <methods>
+          <include name="test4_emptyEmailAndPassFields"/>
+          <include name="test6_emptyPassField"/>
+          <include name="test5_emptyEmailField"/>
+          <include name="test1_positiveLogin"/>
+          <include name="test3_incorrectPassField"/>
+          <include name="test2_incorrectLogin"/>
+        </methods>
+      </class> <!-- tests.LoginTests -->
+    </classes>
+  </test> <!-- Functional(failed) -->
+</suite> <!-- Failed suite [FunctionalSuite] -->

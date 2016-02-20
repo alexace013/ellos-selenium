@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">2 suites, 32 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-FunctionalSuite">
+              <span class="suite-name border-failed">FunctionalSuite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-FunctionalSuite">
+                    <span>functional.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-FunctionalSuite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-FunctionalSuite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-FunctionalSuite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-FunctionalSuite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-FunctionalSuite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-FunctionalSuite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">32 methods, 32 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-FunctionalSuite" class="hide-methods failed suite-FunctionalSuite"> (hide)</a> <!-- hide-methods failed suite-FunctionalSuite -->
+                      <a href="#" panel-name="suite-FunctionalSuite" class="show-methods failed suite-FunctionalSuite"> (show)</a> <!-- show-methods failed suite-FunctionalSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-FunctionalSuite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.RegistrationTests" hash-for-method="test10_negativeFirstEmailFieldEmpty">test10_negativeFirstEmailFieldEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.ProductPageTests" hash-for-method="test10_plusPage">test10_plusPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.RegistrationTests" hash-for-method="test11_negativeSecondEmailFieldEmpty">test11_negativeSecondEmailFieldEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.ProductPageTests" hash-for-method="test11_reaPage">test11_reaPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.ProductPageTests" hash-for-method="test12_inspirationPage">test12_inspirationPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.RegistrationTests" hash-for-method="test12_negativeVariousEmailAddress">test12_negativeVariousEmailAddress</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.RegistrationTests" hash-for-method="test13_negativeVariousPassFields">test13_negativeVariousPassFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.ProductPageTests" hash-for-method="test13_resorPage">test13_resorPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.LoginTests" hash-for-method="test1_positiveLogin">test1_positiveLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.RegistrationTests" hash-for-method="test1_positiveRegistration">test1_positiveRegistration</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.ProductPageTests" hash-for-method="test1_womanProductPage">test1_womanProductPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.LoginTests" hash-for-method="test2_incorrectLogin">test2_incorrectLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.ProductPageTests" hash-for-method="test2_manProductPage">test2_manProductPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.RegistrationTests" hash-for-method="test2_negativeOnlyFirstEmailField">test2_negativeOnlyFirstEmailField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.ProductPageTests" hash-for-method="test3_barnProductPage">test3_barnProductPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.LoginTests" hash-for-method="test3_incorrectPassField">test3_incorrectPassField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.RegistrationTests" hash-for-method="test3_negativeOnlySecondEmailField">test3_negativeOnlySecondEmailField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.LoginTests" hash-for-method="test4_emptyEmailAndPassFields">test4_emptyEmailAndPassFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.RegistrationTests" hash-for-method="test4_negativeOnlyFirstPassField">test4_negativeOnlyFirstPassField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.ProductPageTests" hash-for-method="test4_sportProductPage">test4_sportProductPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.LoginTests" hash-for-method="test5_emptyEmailField">test5_emptyEmailField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.ProductPageTests" hash-for-method="test5_linenAndBathPage">test5_linenAndBathPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.RegistrationTests" hash-for-method="test5_negativeOnlySecondPassField">test5_negativeOnlySecondPassField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.LoginTests" hash-for-method="test6_emptyPassField">test6_emptyPassField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.ProductPageTests" hash-for-method="test6_footwearPage">test6_footwearPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.RegistrationTests" hash-for-method="test6_negativeOnlyEmailFields">test6_negativeOnlyEmailFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.ProductPageTests" hash-for-method="test7_hemPage">test7_hemPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.RegistrationTests" hash-for-method="test7_negativeOnlyPassFields">test7_negativeOnlyPassFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.ProductPageTests" hash-for-method="test8_electronicPage">test8_electronicPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.RegistrationTests" hash-for-method="test8_negativeFirstPassFieldEmpty">test8_negativeFirstPassFieldEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.ProductPageTests" hash-for-method="test9_beautyAndHealthPage">test9_beautyAndHealthPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FunctionalSuite" title="tests.RegistrationTests" hash-for-method="test9_negativeSecondPassFieldEmpty">test9_negativeSecondPassFieldEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-FunctionalSuite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-globalSuite" class="panel globalSuite">
+        </div> <!-- panel globalSuite -->
+        <div panel-name="suite-FunctionalSuite" class="panel FunctionalSuite">
+          <div class="suite-FunctionalSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.ProductPageTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test10_plusPage">
+                  </a> <!-- test10_plusPage -->
+                  <span class="method-name">test10_plusPage</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.ProductPageTests.test10_plusPage(ProductPageTests.java:201)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test11_reaPage">
+                  </a> <!-- test11_reaPage -->
+                  <span class="method-name">test11_reaPage</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.ProductPageTests.test11_reaPage(ProductPageTests.java:221)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test12_inspirationPage">
+                  </a> <!-- test12_inspirationPage -->
+                  <span class="method-name">test12_inspirationPage</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.ProductPageTests.test12_inspirationPage(ProductPageTests.java:242)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test13_resorPage">
+                  </a> <!-- test13_resorPage -->
+                  <span class="method-name">test13_resorPage</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.ProductPageTests.test13_resorPage(ProductPageTests.java:256)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1_womanProductPage">
+                  </a> <!-- test1_womanProductPage -->
+                  <span class="method-name">test1_womanProductPage</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.ProductPageTests.test1_womanProductPage(ProductPageTests.java:18)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test2_manProductPage">
+                  </a> <!-- test2_manProductPage -->
+                  <span class="method-name">test2_manProductPage</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.ProductPageTests.test2_manProductPage(ProductPageTests.java:41)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test3_barnProductPage">
+                  </a> <!-- test3_barnProductPage -->
+                  <span class="method-name">test3_barnProductPage</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.ProductPageTests.test3_barnProductPage(ProductPageTests.java:61)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test4_sportProductPage">
+                  </a> <!-- test4_sportProductPage -->
+                  <span class="method-name">test4_sportProductPage</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.ProductPageTests.test4_sportProductPage(ProductPageTests.java:81)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test5_linenAndBathPage">
+                  </a> <!-- test5_linenAndBathPage -->
+                  <span class="method-name">test5_linenAndBathPage</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.ProductPageTests.test5_linenAndBathPage(ProductPageTests.java:101)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test6_footwearPage">
+                  </a> <!-- test6_footwearPage -->
+                  <span class="method-name">test6_footwearPage</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.ProductPageTests.test6_footwearPage(ProductPageTests.java:121)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test7_hemPage">
+                  </a> <!-- test7_hemPage -->
+                  <span class="method-name">test7_hemPage</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.ProductPageTests.test7_hemPage(ProductPageTests.java:141)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test8_electronicPage">
+                  </a> <!-- test8_electronicPage -->
+                  <span class="method-name">test8_electronicPage</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.ProductPageTests.test8_electronicPage(ProductPageTests.java:161)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test9_beautyAndHealthPage">
+                  </a> <!-- test9_beautyAndHealthPage -->
+                  <span class="method-name">test9_beautyAndHealthPage</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.ProductPageTests.test9_beautyAndHealthPage(ProductPageTests.java:181)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-FunctionalSuite-class-failed -->
+          <div class="suite-FunctionalSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.RegistrationTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test10_negativeFirstEmailFieldEmpty">
+                  </a> <!-- test10_negativeFirstEmailFieldEmpty -->
+                  <span class="method-name">test10_negativeFirstEmailFieldEmpty</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.RegistrationTests.test10_negativeFirstEmailFieldEmpty(RegistrationTests.java:394)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test11_negativeSecondEmailFieldEmpty">
+                  </a> <!-- test11_negativeSecondEmailFieldEmpty -->
+                  <span class="method-name">test11_negativeSecondEmailFieldEmpty</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.RegistrationTests.test11_negativeSecondEmailFieldEmpty(RegistrationTests.java:435)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test12_negativeVariousEmailAddress">
+                  </a> <!-- test12_negativeVariousEmailAddress -->
+                  <span class="method-name">test12_negativeVariousEmailAddress</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.RegistrationTests.test12_negativeVariousEmailAddress(RegistrationTests.java:476)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test13_negativeVariousPassFields">
+                  </a> <!-- test13_negativeVariousPassFields -->
+                  <span class="method-name">test13_negativeVariousPassFields</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.RegistrationTests.test13_negativeVariousPassFields(RegistrationTests.java:515)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1_positiveRegistration">
+                  </a> <!-- test1_positiveRegistration -->
+                  <span class="method-name">test1_positiveRegistration</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.RegistrationTests.test1_positiveRegistration(RegistrationTests.java:25)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test2_negativeOnlyFirstEmailField">
+                  </a> <!-- test2_negativeOnlyFirstEmailField -->
+                  <span class="method-name">test2_negativeOnlyFirstEmailField</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.RegistrationTests.test2_negativeOnlyFirstEmailField(RegistrationTests.java:67)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test3_negativeOnlySecondEmailField">
+                  </a> <!-- test3_negativeOnlySecondEmailField -->
+                  <span class="method-name">test3_negativeOnlySecondEmailField</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.RegistrationTests.test3_negativeOnlySecondEmailField(RegistrationTests.java:108)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test4_negativeOnlyFirstPassField">
+                  </a> <!-- test4_negativeOnlyFirstPassField -->
+                  <span class="method-name">test4_negativeOnlyFirstPassField</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.RegistrationTests.test4_negativeOnlyFirstPassField(RegistrationTests.java:148)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test5_negativeOnlySecondPassField">
+                  </a> <!-- test5_negativeOnlySecondPassField -->
+                  <span class="method-name">test5_negativeOnlySecondPassField</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.RegistrationTests.test5_negativeOnlySecondPassField(RegistrationTests.java:189)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test6_negativeOnlyEmailFields">
+                  </a> <!-- test6_negativeOnlyEmailFields -->
+                  <span class="method-name">test6_negativeOnlyEmailFields</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.RegistrationTests.test6_negativeOnlyEmailFields(RegistrationTests.java:230)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test7_negativeOnlyPassFields">
+                  </a> <!-- test7_negativeOnlyPassFields -->
+                  <span class="method-name">test7_negativeOnlyPassFields</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.RegistrationTests.test7_negativeOnlyPassFields(RegistrationTests.java:271)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test8_negativeFirstPassFieldEmpty">
+                  </a> <!-- test8_negativeFirstPassFieldEmpty -->
+                  <span class="method-name">test8_negativeFirstPassFieldEmpty</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.RegistrationTests.test8_negativeFirstPassFieldEmpty(RegistrationTests.java:312)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test9_negativeSecondPassFieldEmpty">
+                  </a> <!-- test9_negativeSecondPassFieldEmpty -->
+                  <span class="method-name">test9_negativeSecondPassFieldEmpty</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.RegistrationTests.test9_negativeSecondPassFieldEmpty(RegistrationTests.java:353)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-FunctionalSuite-class-failed -->
+          <div class="suite-FunctionalSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.LoginTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1_positiveLogin">
+                  </a> <!-- test1_positiveLogin -->
+                  <span class="method-name">test1_positiveLogin</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.LoginTests.test1_positiveLogin(LoginTests.java:23)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test2_incorrectLogin">
+                  </a> <!-- test2_incorrectLogin -->
+                  <span class="method-name">test2_incorrectLogin</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.LoginTests.test2_incorrectLogin(LoginTests.java:57)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test3_incorrectPassField">
+                  </a> <!-- test3_incorrectPassField -->
+                  <span class="method-name">test3_incorrectPassField</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.LoginTests.test3_incorrectPassField(LoginTests.java:90)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test4_emptyEmailAndPassFields">
+                  </a> <!-- test4_emptyEmailAndPassFields -->
+                  <span class="method-name">test4_emptyEmailAndPassFields</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.LoginTests.test4_emptyEmailAndPassFields(LoginTests.java:117)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test5_emptyEmailField">
+                  </a> <!-- test5_emptyEmailField -->
+                  <span class="method-name">test5_emptyEmailField</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.LoginTests.test5_emptyEmailField(LoginTests.java:141)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test6_emptyPassField">
+                  </a> <!-- test6_emptyPassField -->
+                  <span class="method-name">test6_emptyPassField</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.LoginTests.test6_emptyPassField(LoginTests.java:165)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-FunctionalSuite-class-failed -->
+        </div> <!-- panel FunctionalSuite -->
+        <div panel-name="test-xml-globalSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/media/alexander/HDD/Workspace/Projects/QA/maven/ellos-selenium/src/test/resources/testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;globalSuite&quot;&gt;
+  &lt;suite-files&gt;
+    &lt;suite-file path=&quot;functional.xml&quot;/&gt;
+  &lt;/suite-files&gt;
+&lt;/suite&gt; &lt;!-- globalSuite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="test-xml-FunctionalSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/media/alexander/HDD/Workspace/Projects/QA/maven/ellos-selenium/src/test/resources/functional.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;FunctionalSuite&quot;&gt;
+  &lt;test name=&quot;Functional&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tests.LoginTests&quot;/&gt;
+      &lt;class name=&quot;tests.RegistrationTests&quot;/&gt;
+      &lt;class name=&quot;tests.ProductPageTests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Functional --&gt;
+&lt;/suite&gt; &lt;!-- FunctionalSuite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-globalSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for globalSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-FunctionalSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for FunctionalSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Functional (3 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-globalSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for globalSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-FunctionalSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for FunctionalSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-globalSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for globalSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_globalSuite');
+function tableData_globalSuite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(0);
+window.suiteTableData['globalSuite']= { tableData: data, tableDiv: 'times-div-globalSuite'}
+return data;
+}
+              </script>
+              <div id="times-div-globalSuite">
+              </div> <!-- times-div-globalSuite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-FunctionalSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for FunctionalSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_FunctionalSuite');
+function tableData_FunctionalSuite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(32);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'test4_sportProductPage')
+data.setCell(0, 2, 'tests.ProductPageTests')
+data.setCell(0, 3, 7);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'test6_negativeOnlyEmailFields')
+data.setCell(1, 2, 'tests.RegistrationTests')
+data.setCell(1, 3, 2);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'test8_negativeFirstPassFieldEmpty')
+data.setCell(2, 2, 'tests.RegistrationTests')
+data.setCell(2, 3, 1);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'test1_womanProductPage')
+data.setCell(3, 2, 'tests.ProductPageTests')
+data.setCell(3, 3, 1);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'test9_beautyAndHealthPage')
+data.setCell(4, 2, 'tests.ProductPageTests')
+data.setCell(4, 3, 1);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'test6_emptyPassField')
+data.setCell(5, 2, 'tests.LoginTests')
+data.setCell(5, 3, 1);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'test10_negativeFirstEmailFieldEmpty')
+data.setCell(6, 2, 'tests.RegistrationTests')
+data.setCell(6, 3, 1);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'test2_incorrectLogin')
+data.setCell(7, 2, 'tests.LoginTests')
+data.setCell(7, 3, 1);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'test5_emptyEmailField')
+data.setCell(8, 2, 'tests.LoginTests')
+data.setCell(8, 3, 1);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'test1_positiveRegistration')
+data.setCell(9, 2, 'tests.RegistrationTests')
+data.setCell(9, 3, 1);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'test2_negativeOnlyFirstEmailField')
+data.setCell(10, 2, 'tests.RegistrationTests')
+data.setCell(10, 3, 1);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'test3_negativeOnlySecondEmailField')
+data.setCell(11, 2, 'tests.RegistrationTests')
+data.setCell(11, 3, 1);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'test3_incorrectPassField')
+data.setCell(12, 2, 'tests.LoginTests')
+data.setCell(12, 3, 1);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'test4_emptyEmailAndPassFields')
+data.setCell(13, 2, 'tests.LoginTests')
+data.setCell(13, 3, 1);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'test12_inspirationPage')
+data.setCell(14, 2, 'tests.ProductPageTests')
+data.setCell(14, 3, 1);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'test4_negativeOnlyFirstPassField')
+data.setCell(15, 2, 'tests.RegistrationTests')
+data.setCell(15, 3, 1);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'test9_negativeSecondPassFieldEmpty')
+data.setCell(16, 2, 'tests.RegistrationTests')
+data.setCell(16, 3, 1);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'test12_negativeVariousEmailAddress')
+data.setCell(17, 2, 'tests.RegistrationTests')
+data.setCell(17, 3, 1);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'test1_positiveLogin')
+data.setCell(18, 2, 'tests.LoginTests')
+data.setCell(18, 3, 1);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'test5_negativeOnlySecondPassField')
+data.setCell(19, 2, 'tests.RegistrationTests')
+data.setCell(19, 3, 1);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'test13_negativeVariousPassFields')
+data.setCell(20, 2, 'tests.RegistrationTests')
+data.setCell(20, 3, 1);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'test6_footwearPage')
+data.setCell(21, 2, 'tests.ProductPageTests')
+data.setCell(21, 3, 0);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'test5_linenAndBathPage')
+data.setCell(22, 2, 'tests.ProductPageTests')
+data.setCell(22, 3, 0);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'test8_electronicPage')
+data.setCell(23, 2, 'tests.ProductPageTests')
+data.setCell(23, 3, 0);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'test2_manProductPage')
+data.setCell(24, 2, 'tests.ProductPageTests')
+data.setCell(24, 3, 0);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'test11_reaPage')
+data.setCell(25, 2, 'tests.ProductPageTests')
+data.setCell(25, 3, 0);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'test11_negativeSecondEmailFieldEmpty')
+data.setCell(26, 2, 'tests.RegistrationTests')
+data.setCell(26, 3, 0);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'test10_plusPage')
+data.setCell(27, 2, 'tests.ProductPageTests')
+data.setCell(27, 3, 0);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'test7_hemPage')
+data.setCell(28, 2, 'tests.ProductPageTests')
+data.setCell(28, 3, 0);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'test3_barnProductPage')
+data.setCell(29, 2, 'tests.ProductPageTests')
+data.setCell(29, 3, 0);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'test7_negativeOnlyPassFields')
+data.setCell(30, 2, 'tests.RegistrationTests')
+data.setCell(30, 3, 0);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'test13_resorPage')
+data.setCell(31, 2, 'tests.ProductPageTests')
+data.setCell(31, 3, 0);
+window.suiteTableData['FunctionalSuite']= { tableData: data, tableDiv: 'times-div-FunctionalSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 28 ms</span>
+              <div id="times-div-FunctionalSuite">
+              </div> <!-- times-div-FunctionalSuite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-globalSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for globalSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-FunctionalSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for FunctionalSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-globalSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-FunctionalSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">4 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.RegistrationTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">quitBrowser</span>
+                <br/>
+                <span class="ignored-method-name">startBrowser</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.LoginTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">quitBrowser</span>
+                <br/>
+                <span class="ignored-method-name">startBrowser</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-globalSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.ProductPageTests</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">startBrowser</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test1_positiveLogin</span>
+                <span class="method-start">11725 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test2_incorrectLogin</span>
+                <span class="method-start">11731 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test3_incorrectPassField</span>
+                <span class="method-start">11732 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test4_emptyEmailAndPassFields</span>
+                <span class="method-start">11733 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test5_emptyEmailField</span>
+                <span class="method-start">11734 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test6_emptyPassField</span>
+                <span class="method-start">11735 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.RegistrationTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test1_positiveRegistration</span>
+                <span class="method-start">11737 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test2_negativeOnlyFirstEmailField</span>
+                <span class="method-start">11738 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test3_negativeOnlySecondEmailField</span>
+                <span class="method-start">11739 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test4_negativeOnlyFirstPassField</span>
+                <span class="method-start">11740 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test5_negativeOnlySecondPassField</span>
+                <span class="method-start">11741 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test6_negativeOnlyEmailFields</span>
+                <span class="method-start">11742 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test7_negativeOnlyPassFields</span>
+                <span class="method-start">11745 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test8_negativeFirstPassFieldEmpty</span>
+                <span class="method-start">11745 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test9_negativeSecondPassFieldEmpty</span>
+                <span class="method-start">11746 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test10_negativeFirstEmailFieldEmpty</span>
+                <span class="method-start">11747 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test11_negativeSecondEmailFieldEmpty</span>
+                <span class="method-start">11749 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test12_negativeVariousEmailAddress</span>
+                <span class="method-start">11750 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test13_negativeVariousPassFields</span>
+                <span class="method-start">11751 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.ProductPageTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test1_womanProductPage</span>
+                <span class="method-start">11752 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test2_manProductPage</span>
+                <span class="method-start">11753 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test3_barnProductPage</span>
+                <span class="method-start">11754 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test4_sportProductPage</span>
+                <span class="method-start">11754 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test5_linenAndBathPage</span>
+                <span class="method-start">11761 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test6_footwearPage</span>
+                <span class="method-start">11762 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test7_hemPage</span>
+                <span class="method-start">11762 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test8_electronicPage</span>
+                <span class="method-start">11763 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test9_beautyAndHealthPage</span>
+                <span class="method-start">11763 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test10_plusPage</span>
+                <span class="method-start">11764 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test11_reaPage</span>
+                <span class="method-start">11765 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test12_inspirationPage</span>
+                <span class="method-start">11765 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test13_resorPage</span>
+                <span class="method-start">11766 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-suite after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">quitBrowser</span>
+                <span class="method-start">11830 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-FunctionalSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.ProductPageTests</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">startBrowser</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test1_positiveLogin</span>
+                <span class="method-start">11725 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test2_incorrectLogin</span>
+                <span class="method-start">11731 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test3_incorrectPassField</span>
+                <span class="method-start">11732 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test4_emptyEmailAndPassFields</span>
+                <span class="method-start">11733 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test5_emptyEmailField</span>
+                <span class="method-start">11734 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test6_emptyPassField</span>
+                <span class="method-start">11735 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.RegistrationTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test1_positiveRegistration</span>
+                <span class="method-start">11737 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test2_negativeOnlyFirstEmailField</span>
+                <span class="method-start">11738 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test3_negativeOnlySecondEmailField</span>
+                <span class="method-start">11739 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test4_negativeOnlyFirstPassField</span>
+                <span class="method-start">11740 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test5_negativeOnlySecondPassField</span>
+                <span class="method-start">11741 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test6_negativeOnlyEmailFields</span>
+                <span class="method-start">11742 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test7_negativeOnlyPassFields</span>
+                <span class="method-start">11745 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test8_negativeFirstPassFieldEmpty</span>
+                <span class="method-start">11745 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test9_negativeSecondPassFieldEmpty</span>
+                <span class="method-start">11746 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test10_negativeFirstEmailFieldEmpty</span>
+                <span class="method-start">11747 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test11_negativeSecondEmailFieldEmpty</span>
+                <span class="method-start">11749 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test12_negativeVariousEmailAddress</span>
+                <span class="method-start">11750 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test13_negativeVariousPassFields</span>
+                <span class="method-start">11751 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.ProductPageTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test1_womanProductPage</span>
+                <span class="method-start">11752 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test2_manProductPage</span>
+                <span class="method-start">11753 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test3_barnProductPage</span>
+                <span class="method-start">11754 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test4_sportProductPage</span>
+                <span class="method-start">11754 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test5_linenAndBathPage</span>
+                <span class="method-start">11761 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test6_footwearPage</span>
+                <span class="method-start">11762 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test7_hemPage</span>
+                <span class="method-start">11762 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test8_electronicPage</span>
+                <span class="method-start">11763 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test9_beautyAndHealthPage</span>
+                <span class="method-start">11763 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test10_plusPage</span>
+                <span class="method-start">11764 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test11_reaPage</span>
+                <span class="method-start">11765 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test12_inspirationPage</span>
+                <span class="method-start">11765 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test13_resorPage</span>
+                <span class="method-start">11766 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-suite after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">quitBrowser</span>
+                <span class="method-start">11830 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

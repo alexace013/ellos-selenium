@@ -1,0 +1,49 @@
+2016-02-20 14:35:14 ConfigurationData [INFO] - created properties
+2016-02-20 14:35:14 ConfigurationData [INFO] - created map properties
+2016-02-20 14:35:14 Page [INFO] - start open page
+2016-02-20 14:35:22 Fixture [INFO] - start test suit execution
+2016-02-20 14:35:22 LoginTests [INFO] - test1_positiveLogin
+2016-02-20 14:35:22 LoginTests [INFO] - test2_incorrectLogin
+2016-02-20 14:35:22 LoginTests [INFO] - test3_incorrectPassField
+2016-02-20 14:35:22 LoginTests [INFO] - test4_emptyEmailAndPassFields
+2016-02-20 14:35:22 LoginTests [INFO] - test5_emptyEmailField
+2016-02-20 14:35:22 LoginTests [INFO] - test6_emptyPassField
+2016-02-20 14:35:22 RegistrationTests [INFO] - 
+test1_positiveRegistration
+
+2016-02-20 14:35:22 RegistrationTests [INFO] - 
+test2_negativeOnlyFirstEmailField
+
+2016-02-20 14:35:22 RegistrationTests [INFO] - 
+test3_negativeOnlySecondEmailField
+
+2016-02-20 14:35:22 RegistrationTests [INFO] - 
+test4_negativeOnlyFirstPassField
+
+2016-02-20 14:35:22 RegistrationTests [INFO] - 
+test5_negativeOnlySecondPassField
+
+2016-02-20 14:35:22 RegistrationTests [INFO] - 
+test6_negativeOnlyEmailFields
+
+2016-02-20 14:35:22 RegistrationTests [INFO] - 
+test7_negativeOnlyPassFields
+
+2016-02-20 14:35:22 RegistrationTests [INFO] - 
+test8_negativeFirstPassFieldEmpty
+
+2016-02-20 14:35:22 RegistrationTests [INFO] - 
+test9_negativeSecondPassFieldEmpty
+
+2016-02-20 14:35:22 RegistrationTests [INFO] - 
+test10_negativeFirstEmailFieldEmpty
+
+2016-02-20 14:35:22 RegistrationTests [INFO] - 
+test11_negativeSecondEmailFieldEmpty
+
+2016-02-20 14:35:22 RegistrationTests [INFO] - 
+test12_negativeVariousEmailAddress
+
+2016-02-20 14:35:22 RegistrationTests [INFO] - 
+test13_negativeVariousPassFields
+
