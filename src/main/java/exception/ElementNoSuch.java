@@ -4,7 +4,7 @@ import java.util.NoSuchElementException;
 
 /**
  * This exception used in {@link utils.WebElementsActions} and
- * {@link utils.ConfigurationData} and {@link utils.WebInterface}
+ * {@link utils.ConfigurationData}
  * and other classes of descendants
  */
 

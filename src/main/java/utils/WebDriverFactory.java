@@ -30,37 +30,21 @@ public class WebDriverFactory {
     }
 
     public static WebDriverWrapper initDriver() {
-
         if (FIREFOX.equals(browserName)) {
-
             driverWrapper = new WebDriverWrapper(new FirefoxDriver());
-
         } else if (PHANTOMJS.equals(browserName)) {
-
             File phantomjs = Phanbedder.unpack();
-
             DesiredCapabilities caps = new DesiredCapabilities();
-
             caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, phantomjs.getAbsolutePath());
             driverWrapper = new WebDriverWrapper(new PhantomJSDriver(caps));
-
-
         } else if (CHROME.equals(browserName)) {
-
             ChromeOptions options = new ChromeOptions();
-
             driverWrapper = new WebDriverWrapper(new ChromeDriver(options));
-
         } else {
-
             Assert.fail("invalid driver name");
-
         }
-
         driverWrapper.manage().deleteAllCookies();
         driverWrapper.manage().window().maximize();
-
         return driverWrapper;
     }
-
 }

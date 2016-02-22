@@ -17,9 +17,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
     public static WebDriver driver;
 
     public WebDriverWrapper(WebDriver driver) {
-
         this.driver = driver;
-
     }
 
     /**
@@ -29,9 +27,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @SuppressWarnings("JavadocReference")
     public WebDriver getOriginalDriver() {
-
         return driver;
-
     }
 
     /**
@@ -41,9 +37,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @Override
     public void get(String pageLink) {
-
         driver.get(pageLink);
-
     }
 
     /**
@@ -53,9 +47,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @Override
     public String getCurrentUrl() {
-
         return driver.getCurrentUrl();
-
     }
 
     /**
@@ -66,9 +58,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @Override
     public String getTitle() {
-
         return driver.getTitle();
-
     }
 
     /**
@@ -81,12 +71,9 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @Override
     public List<WebElement> findElements(By by) {
-
         WebDriverWait wait = new WebDriverWait(driver, TIME_TO_WAIT);
         wait.until(ExpectedConditions.presenceOfElementLocated(by));
-
         return driver.findElements(by);
-
     }
 
     /**
@@ -98,12 +85,9 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @Override
     public WebElement findElement(By by) {
-
         WebDriverWait wait = new WebDriverWait(driver, TIME_TO_WAIT);
         wait.until(ExpectedConditions.presenceOfElementLocated(by));
-
         return driver.findElement(by);
-
     }
 
     /**
@@ -113,9 +97,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @Override
     public String getPageSource() {
-
         return driver.getPageSource();
-
     }
 
     /**
@@ -123,9 +105,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @Override
     public void close() {
-
         driver.close();
-
     }
 
     /**
@@ -133,9 +113,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @Override
     public void quit() {
-
         driver.quit();
-
     }
 
     /**
@@ -148,9 +126,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @Override
     public Set<String> getWindowHandles() {
-
         return driver.getWindowHandles();
-
     }
 
     /**
@@ -163,9 +139,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @Override
     public String getWindowHandle() {
-
         return driver.getWindowHandle();
-
     }
 
     /**
@@ -176,9 +150,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @Override
     public TargetLocator switchTo() {
-
         return driver.switchTo();
-
     }
 
     /**
@@ -191,9 +163,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @Override
     public Navigation navigate() {
-
         return driver.navigate();
-
     }
 
     /**
@@ -204,9 +174,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @Override
     public Options manage() {
-
         return driver.manage();
-
     }
 
     /**
@@ -218,37 +186,20 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
      */
     @Override
     public <X> X getScreenshotAs(OutputType<X> outType) {
-
         try {
-
             if (driver instanceof FirefoxDriver) {
-
                 return ((FirefoxDriver) driver).getScreenshotAs(outType);
-
             } else if (driver instanceof ChromeDriver) {
-
                 return ((ChromeDriver) driver).getScreenshotAs(outType);
-
             } else if (driver instanceof InternetExplorerDriver) {
-
                 return ((InternetExplorerDriver) driver).getScreenshotAs(outType);
-
             } else if (driver instanceof PhantomJSDriver) {
-
                 return ((PhantomJSDriver) driver).getScreenshotAs(outType);
-
             } else
-
                 return null;
-
         } catch (WebDriverException e) {
-
             e.printStackTrace();
-
         }
-
         return null;
-
     }
-
 }
