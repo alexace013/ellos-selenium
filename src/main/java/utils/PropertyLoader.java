@@ -18,36 +18,23 @@ public class PropertyLoader {
      * @return {@link String#valueOf(Object)}
      */
     public static synchronized String loadProperty(String name) {
-
         if (propertiesMap == null) {
-
             loadData();
-
         }
-
         return String.valueOf(propertiesMap.get(name));
-
     }
 
     /**
      * Private static synchronized method for load data from properties
      */
     private static synchronized void loadData() {
-
         Properties properties = new Properties();
-
         try {
-
             properties.load(PropertyLoader.class.getResourceAsStream(PROPERTY_FILE));
             propertiesMap = properties;
-
-
         } catch (IOException e) {
-
             e.printStackTrace();
-
         }
-
     }
 
 }

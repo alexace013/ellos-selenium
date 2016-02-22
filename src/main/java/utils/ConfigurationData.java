@@ -31,22 +31,15 @@ public class ConfigurationData {
      * @throws IOException throw exception in {@link ConfigurationData#loadPropertiesToMap()}
      */
     private ConfigurationData() {
-
         this.PROPERTIES = new Properties();
         log.info(String.format("created properties"));
-
         try {
-
             this.propertiesMap = loadPropertiesToMap();
             log.info(String.format("created map properties"));
-
         } catch (IOException e) {
-
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
-
         }
-
     }
 
     /**
@@ -55,14 +48,10 @@ public class ConfigurationData {
      * @return new object Configuration Data {@link ConfigurationData#config}
      */
     public static ConfigurationData getConfigurationData() {
-
         if (config == null) {
             config = new ConfigurationData();
-
         }
-
         return config;
-
     }
 
     /**
@@ -80,35 +69,21 @@ public class ConfigurationData {
      * @throws IOException      this exception throw method {@link Properties#load(InputStream)}
      */
     private Map<String, String> loadPropertiesToMap() throws ElementNoSuch, FileException, PropertiesNoLoad {
-
         if (Files.exists(Paths.get(UI_MAPPING_PATH))) {
-
             FileInputStream fileInputStream = null;
-
             try {
-
                 fileInputStream = new FileInputStream(UI_MAPPING_PATH);
                 PROPERTIES.load(fileInputStream);
-
             } catch (FileException e) {
-
                 e.printStackTrace();
-
             } catch (IOException e) {
-
                 e.printStackTrace();
-
             }
-
         } else {
-
             throw new ElementNoSuch(
                     String.format("< %s > not found exception", UI_MAPPING_PATH.substring(13)));
-
         }
-
         return propertiesMap = new HashMap<String, String>((Map) PROPERTIES);
-
     }
 
     /**
@@ -129,42 +104,30 @@ public class ConfigurationData {
      * @throws {@link ElementNoSuch}
      */
     public By getLocator(String key) throws ElementNoSuch {
-
         String[] partsOfLocators = getPropertyValue(key).split("\"");
         String findMethod = partsOfLocators[0].substring(0, partsOfLocators[0].length() - 1);
         String locator = partsOfLocators[1];
-
         switch (findMethod) {
-
             case "id":
                 return By.id(locator);
-
             case "name":
                 return By.name(locator);
-
             case "class":
                 return By.className(locator);
-
             case "cssSelector":
                 return By.cssSelector(locator);
-
             case "xpath":
                 return By.xpath(locator);
-
             case "tagName":
                 return By.tagName(locator);
-
             case "linkText":
                 return By.linkText(locator);
-
             case "partialLinkText":
                 return By.partialLinkText(locator);
-
             default:
                 throw new ElementNoSuch(
                         String.format("Locator < %s >  not defined!", locator));
         }
-
     }
 
 }

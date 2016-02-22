@@ -1,0 +1,10 @@
+target/
+.idea
+
+# Package Files #
+#*.jar
+*.war
+*.ear
+
+# Created by .ignore support plugin (hsz.mobi)
+

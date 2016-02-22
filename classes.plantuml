@@ -78,7 +78,7 @@ class utils.PrintScreen {
 .. Methods ..
 +printScreenPage() : void
 }
-interface utils.FileProperties  <<Annotation>>  {
+interface annotations.FileProperties  <<Annotation>>  {
 .. Methods ..
 + {abstract} properties() : boolean
 + {abstract} xml() : boolean

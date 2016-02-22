@@ -1,4 +1,4 @@
-package utils;
+package annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -15,9 +15,6 @@ import java.lang.annotation.Target;
 @Target(value = ElementType.FIELD)
 @Retention(value = RetentionPolicy.RUNTIME)
 public @interface FileProperties {
-
     boolean properties() default false;
-
     boolean xml() default false;
-
 }
