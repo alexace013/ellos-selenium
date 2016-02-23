@@ -1,5 +1,5 @@
 target/
-.idea
+.idea/workspace.xml
 
 # Package Files #
 #*.jar

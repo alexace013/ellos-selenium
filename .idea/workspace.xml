@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43494d88-4d40-4afd-8fae-9e82f8387514" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/tests/TestClass.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/tests/Test.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/random/DataProviders.java" afterPath="$PROJECT_DIR$/src/main/java/random/DataProviders.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/random/ParametrizedUsers.java" afterPath="$PROJECT_DIR$/src/main/java/random/ParametrizedUsers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/random/RandomUser.java" afterPath="$PROJECT_DIR$/src/main/java/random/RandomUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/random/RandomUserDataProviders.java" afterPath="$PROJECT_DIR$/src/main/java/random/RandomUserDataProviders.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/CheckOutTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/CheckOutTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/Fixture.java" afterPath="$PROJECT_DIR$/src/test/java/tests/Fixture.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/ProductAddToBasketTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/ProductAddToBasketTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/ProductPageTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/ProductPageTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" />
     </list>
     <ignored path="ellos-selenium.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,14 +41,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistrationTests.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RegistrationTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5346062">
+            <state vertical-scroll-proportion="0.0">
               <caret line="375" column="54" selection-start-line="375" selection-start-column="54" selection-end-line="375" selection-end-column="54" />
               <folding>
                 <element signature="e#859#869#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.04731861">
+              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -143,7 +140,6 @@
         <option value="$PROJECT_DIR$/src/main/java/utils/WebDriverWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ScreenShot.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ScreenShotMaker.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/random/DataProviders.java" />
         <option value="$PROJECT_DIR$/src/main/java/random/ParametrizedUsers.java" />
         <option value="$PROJECT_DIR$/src/main/java/random/RandomUser.java" />
@@ -159,6 +155,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/random/RandomEmail.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -453,40 +450,6 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="test">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="resources">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ellos-selenium">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="test">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
@@ -502,54 +465,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="main">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ellos-selenium">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="main">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ellos-selenium">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="main">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="random">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -1074,8 +989,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19179164" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30602783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4636785" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30602783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4636785" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30781373" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1291,14 +1206,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28391168">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/ClassNameUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.048622366">
@@ -1500,11 +1407,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5346062">
+        <state vertical-scroll-proportion="0.0">
           <caret line="375" column="54" selection-start-line="375" selection-start-column="54" selection-end-line="375" selection-end-column="54" />
           <folding>
             <element signature="e#859#869#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04731861">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
