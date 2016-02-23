@@ -22,37 +22,23 @@ public class Fixture {
 
     @BeforeSuite
     public void startBrowser() {
-
         driverWrapper = WebDriverFactory.initDriver();
-
         driverWrapper.manage().window().maximize();
         driverWrapper.manage().timeouts().implicitlyWait(Long.parseLong(impWait), TimeUnit.SECONDS);
-
         try {
-
             ellos = new Ellos(driverWrapper);
-
         } catch (Exception e) {
-
             e.printStackTrace();
-
         }
-
         log.info(String.format("start test suit execution"));
-
     }
 
     @AfterSuite
     public void quitBrowser() {
-
         if (driverWrapper != null) {
-
             driverWrapper.quit();
-
         }
-
         log.info(String.format("tests suite execution completed"));
-
     }
 
 }

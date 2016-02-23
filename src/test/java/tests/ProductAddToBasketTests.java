@@ -11,7 +11,6 @@ public class ProductAddToBasketTests extends Fixture {
 
     @Test
     public void test1_addFirstProduct() {
-
         ellos.homePage.closeBlurb();
         ellos.homePage.switchToElectronicPage();
 //        getBasketPage().switchToMobile();
@@ -19,16 +18,11 @@ public class ProductAddToBasketTests extends Fixture {
         ellos.productPage.switchToFirstPositionCategory();
         ellos.productPage.addProductToBasket();
         ellos.productPage.switchToHomePage();
-
-
 //        Assert.assertTrue(getProductPage().textPresent(), "success page with iPhone 6 Plus 16GB Space Gray");
-
-
     }
 
     @Test
     public void test2_addSecondProduct() {
-
         ellos.homePage.switchToManPage();
         ellos.productPage.switchToProductCategory();
 //        getProductPage().switchToFirstPositionCategory();
@@ -37,14 +31,11 @@ public class ProductAddToBasketTests extends Fixture {
         ellos.productPage.selectSize();
         ellos.productPage.addProductToBasket();
         ellos.productPage.switchToHomePage();
-
     }
 
     @Test
     public void test3_addThirdProduct() {
-
         // TODO must be *XL size
-
     }
 
 }

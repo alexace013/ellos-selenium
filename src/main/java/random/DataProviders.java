@@ -10,23 +10,18 @@ import java.util.List;
 public class DataProviders {
 
     public static Iterator<Object[]> loadUsersFromFile() throws IOException {
-
         BufferedReader bufReader = new BufferedReader(new InputStreamReader(
                 DataProviders.class.getResourceAsStream("src/test/resources/user.data")));
-
         List<Object[]> usersData = new ArrayList<Object[]>();
         String str = bufReader.readLine();
         while (str != null) {
             usersData.add(str.split(";"));
             str = bufReader.readLine();
         }
-
         if (bufReader != null) {
             bufReader.close();
         }
-
         return usersData.iterator();
-
     }
 
 }
