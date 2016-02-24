@@ -8,11 +8,17 @@ public class ProductAddToBasketTests extends Fixture {
 
     private static final Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
 
-
     @Test
     public void test1_addFirstProduct() {
 
+        log.info(String.format("\ntest1_addFirstProduct\n"));
+
+        if (ellos.registrationPage.openPage()) {
+            ellos.registrationPage.switchToHomePage();
+        }
+
         ellos.homePage.closeBlurb();
+        ellos.homePage.refreshHomePage();
         ellos.homePage.switchToElectronicPage();
 //        getBasketPage().switchToMobile();
         ellos.productPage.switchToSecondPositionCategory();
@@ -25,6 +31,8 @@ public class ProductAddToBasketTests extends Fixture {
 
     @Test
     public void test2_addSecondProduct() {
+
+        log.info(String.format("test2_addSecondProduct"));
 
         ellos.homePage.switchToManPage();
         ellos.productPage.switchToProductCategory();

@@ -13,7 +13,7 @@ import utils.WebElementsActions;
 public class LoginPage extends Page {
 
     private final static Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
-    private static final String MAIN_PAGE = PropertyLoader.loadProperty("site.url");
+    private static final String MAIN_PAGE = PropertyLoader.loadProperty("registration.url");
 
     public LoginPage(WebDriverWrapper driverWrapper) {
 

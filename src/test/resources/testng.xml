@@ -3,9 +3,4 @@
     <suite-files>
         <suite-file path="functional.xml"/>
     </suite-files>
-    <!--<test name="test3">-->
-        <!--<classes>-->
-            <!--<class name="tests.TestClass"></class>-->
-        <!--</classes>-->
-    <!--</test>-->
 </suite>
