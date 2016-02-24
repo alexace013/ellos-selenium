@@ -16,8 +16,10 @@ public class CheckoutPage extends Page {
     private static final String MAIN_PAGE = PropertyLoader.loadProperty("site.url");
 
     public CheckoutPage(WebDriverWrapper driverWrapper) {
+
         super(driverWrapper, MAIN_PAGE);
         openPage();
+
     }
 
     /**
@@ -26,6 +28,7 @@ public class CheckoutPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void pressButtonCheckOut() {
+
         try {
             web.windowScrollDown();
             web.moveToElementAndClick("buttonCheckout", "buttonCheckout");
@@ -33,6 +36,7 @@ public class CheckoutPage extends Page {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -43,13 +47,16 @@ public class CheckoutPage extends Page {
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void inputEmail(String email) throws ElementNoSuch {
+
         web.moveToElementAndClick("registerCustomerEmailField", "registerCustomerEmailField");
         web.input("registerCustomerEmailField", email);
+
         try {
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -60,8 +67,10 @@ public class CheckoutPage extends Page {
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void inputEmailRepeat(String email) throws ElementNoSuch {
+
         web.moveToElementAndClick("registerCustomerEmailFieldConfirm", "registerCustomerEmailFieldConfirm");
         web.input("registerCustomerEmailFieldConfirm", email);
+
     }
 
     /**
@@ -72,8 +81,10 @@ public class CheckoutPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void inputPassword(String password) throws ElementNoSuch {
+
         web.moveToElementAndClick("registerCustomerPassFieldInputFirst", "registerCustomerPassFieldInputFirst");
         web.input("registerCustomerPassFieldInputSecond", password);
+
     }
 
     /**
@@ -84,9 +95,11 @@ public class CheckoutPage extends Page {
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void inputPasswordRepeat(String password) throws ElementNoSuch {
+
         web.moveToElementAndClick("registerCustomerPassFieldInputFieldConfirmFirst",
                 "registerCustomerPassFieldInputFieldConfirmFirst");
         web.input("registerCustomerPassFieldInputFieldConfirmSecond", password);
+
     }
 
     /**
@@ -97,9 +110,11 @@ public class CheckoutPage extends Page {
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void inputFirstName(String name) throws ElementNoSuch {
+
         web.windowScrollDown();
         web.moveToElementAndClick("registerCustomerFieldFirstName", "registerCustomerFieldFirstName");
         web.input("registerCustomerFieldFirstName", name);
+
     }
 
     /**
@@ -110,9 +125,11 @@ public class CheckoutPage extends Page {
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void inputLastName(String name) throws ElementNoSuch {
+
         web.windowScrollDown();
         web.moveToElementAndClick("registerCustomerFieldLastName", "registerCustomerFieldLastName");
         web.input("registerCustomerFieldLastName", name);
+
     }
 
     /**
@@ -123,8 +140,10 @@ public class CheckoutPage extends Page {
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void input_CO_address(String address) throws ElementNoSuch {
+
         web.moveToElementAndClick("registerCustomerFieldCOAddress", "registerCustomerFieldCOAddress");
         web.input("registerCustomerFieldCOAddress", address);
+
     }
 
     /**
@@ -135,8 +154,10 @@ public class CheckoutPage extends Page {
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void inputAddress(String address) throws ElementNoSuch {
+
         web.moveToElementAndClick("registerCustomerFieldAddress", "registerCustomerFieldAddress");
         web.input("registerCustomerFieldAddress", address);
+
     }
 
     /**
@@ -147,9 +168,11 @@ public class CheckoutPage extends Page {
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void inputZipCode(String address) throws ElementNoSuch {
+
         web.windowScrollDown();
         web.moveToElementAndClick("registerCustomerFieldPostCode", "registerCustomerFieldPostCode");
         web.input("registerCustomerFieldPostCode", address);
+
     }
 
     /**
@@ -160,9 +183,11 @@ public class CheckoutPage extends Page {
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void inputCity(String city) throws ElementNoSuch {
+
         web.windowScrollDown();
         web.moveToElementAndClick("registerCustomerFieldCity", "registerCustomerFieldCity");
         web.input("registerCustomerFieldCity", city);
+
     }
 
     /**

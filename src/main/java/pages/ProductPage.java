@@ -16,8 +16,10 @@ public class ProductPage extends Page {
     private static final String MAIN_PAGE = PropertyLoader.loadProperty("site.url");
 
     public ProductPage(WebDriverWrapper driverWrapper) {
+
         super(driverWrapper, MAIN_PAGE);
         openPage();
+
     }
 
     /**
@@ -26,12 +28,14 @@ public class ProductPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void switchToHomePage() {
+
         try {
             web.moveToElementAndClick("logoCenterLink", "logoCenterLink");
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -42,12 +46,14 @@ public class ProductPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void switchToHomeFinishedTest() {
+
         try {
             web.moveToElementAndClick("logoLeftLink", "logoLeftLink");
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -57,6 +63,7 @@ public class ProductPage extends Page {
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void switchToProductCategory() {
+
         try {
             web.moveToElement("logoLeftLink");
             web.moveToElementAndClick("productCategoryFirstPosition", "productCategoryFirstPositionLink");
@@ -64,6 +71,7 @@ public class ProductPage extends Page {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
 
@@ -74,6 +82,7 @@ public class ProductPage extends Page {
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void switchToFirstPositionCategory() {
+
         try {
             web.moveToElement("logoLeftLink");
             web.moveToElementAndClick("productFirstPositionLink", "productFirstPositionLink");
@@ -81,6 +90,7 @@ public class ProductPage extends Page {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -89,7 +99,9 @@ public class ProductPage extends Page {
      * @throws exception.ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
      */
     public boolean textPresent() {
+
         try {
+
             if (web.isElementPresent("theProductText")) {
                 log.info(String.format("correct page"));
                 return true;
@@ -97,11 +109,14 @@ public class ProductPage extends Page {
                 log.info(String.format("incorrect page"));
                 return false;
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
         return false;
+
     }
 
     /**
@@ -111,6 +126,7 @@ public class ProductPage extends Page {
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void switchToSecondPositionCategory() {
+
         try {
             web.moveToElement("logoLeftLink");
             web.moveToElementAndClick("productCategorySecondPositionLink", "productCategorySecondPositionLink");
@@ -118,6 +134,7 @@ public class ProductPage extends Page {
             e.printStackTrace();
             log.error(String.format("Exeption < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -127,7 +144,9 @@ public class ProductPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#waitForElementPresent(String)}
      */
     public boolean isTheProductPage() {
+
         try {
+
             if (web.waitForElementPresent("productName")) {
                 log.info(String.format("switch to product page < %s > was correct", "productName"));
                 return true;
@@ -135,11 +154,14 @@ public class ProductPage extends Page {
                 log.info(String.format("switch to product page < %s > was failed", "productName"));
                 return false;
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
         return false;
+
     }
 
     /**
@@ -150,7 +172,9 @@ public class ProductPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
      */
     public boolean checkCorrectSwitchToProductPage() {
+
         try {
+
             if (web.isElementPresent("productName")) {
                 log.info(String.format("switch to product page was correct"));
                 return true;
@@ -163,7 +187,9 @@ public class ProductPage extends Page {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
         return false;
+
     }
 
     /**
@@ -172,6 +198,7 @@ public class ProductPage extends Page {
      * @throws exception.ElementNoSuch {@link WebElementsActions#clickElement(String)}
      */
     public void addProductToBasket() {
+
         try {
             web.windowScrollDown();
             web.clickElement("addProductToPage");
@@ -179,6 +206,7 @@ public class ProductPage extends Page {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -188,21 +216,26 @@ public class ProductPage extends Page {
      *                       {@link WebElementsActions#isElementPresent(String)}
      */
     public void forInspirationPage() {
+
         // this cycle down the page to the desired element
         for (int i = 0; i < 3; i++) {
             web.windowScrollDown();
         }
+
         try {
             web.clickLink("inspirationProductTwo");
+
             if (web.waitForElementPresent("isInspirationElementPresent")) {
                 log.info(String.format("correct page"));
             } else {
                 log.info(String.format("incorrect page"));
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -211,6 +244,7 @@ public class ProductPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void forResorPage() {
+
         try {
             web.moveToElementAndClick("resorMenuElementTwo", "resorMenuElementTwo");
 //        web.clickLink("linkNazar");
@@ -220,6 +254,7 @@ public class ProductPage extends Page {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -231,7 +266,9 @@ public class ProductPage extends Page {
      *                       {@link WebElementsActions#clickLink(String)}
      */
     private boolean isTravelPage() {
+
         try {
+
             if (web.isElementPresent("travelLogo")) {
                 // click on an item on the page
                 web.clickLink("linkNazar");
@@ -241,11 +278,14 @@ public class ProductPage extends Page {
                 log.info(String.format("not resor page"));
                 return false;
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
         return false;
+
     }
 
     /**
@@ -256,17 +296,22 @@ public class ProductPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
      */
     private boolean isNazarPagePresent() {
+
         try {
+
             if (web.isElementPresent("nazarPage")) {
                 return true;
             } else {
                 return false;
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
         return false;
+
     }
 
     /**
@@ -275,6 +320,7 @@ public class ProductPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void selectColor() {
+
         try {
             web.windowScrollDown();
             web.moveToElementAndClick("colorMenuLink", "colorMenuLink");
@@ -283,9 +329,11 @@ public class ProductPage extends Page {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     public void selectSize() {
+
         try {
             web.windowScrollDown();
             web.moveToElementAndClick("sizeMenuLink", "sizeMenuLink");
@@ -294,6 +342,7 @@ public class ProductPage extends Page {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
 }

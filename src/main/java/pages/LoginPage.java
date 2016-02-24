@@ -16,8 +16,10 @@ public class LoginPage extends Page {
     private static final String MAIN_PAGE = PropertyLoader.loadProperty("site.url");
 
     public LoginPage(WebDriverWrapper driverWrapper) {
+
         super(driverWrapper, MAIN_PAGE);
         openPage();
+
     }
 
     /**
@@ -28,6 +30,7 @@ public class LoginPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)}
      */
     public void clickAndInputLoginField(String loginData) {
+
         try {
             web.clickElement("loginFieldInput");
             isBeCleaned("loginFieldInput");
@@ -35,6 +38,7 @@ public class LoginPage extends Page {
         } catch (ElementNoSuch e) {
             e.printStackTrace();
         }
+
     }
 
     /**
@@ -44,16 +48,21 @@ public class LoginPage extends Page {
      * @throws ElementNoSuch {@link utils.WebElementsActions#isElementPresent(String)}
      */
     public boolean isUserLogin() {
+
         try {
+
             if (web.isElementPresent("loginLink")) {
                 return true;
             } else {
                 return false;
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
         }
+
         return false;
+
     }
 
     /**
@@ -63,16 +72,21 @@ public class LoginPage extends Page {
      * @throws ElementNoSuch {@link utils.WebElementsActions#isElementPresent(String)}
      */
     public boolean isUserLogout() {
+
         try {
+
             if (web.isElementPresent("logoutLink")) {
                 return true;
             } else {
                 return false;
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
         }
+
         return false;
+
     }
 
     /**
@@ -85,6 +99,7 @@ public class LoginPage extends Page {
      *                       {@link WebElementsActions#pressTAB(String)}
      */
     public void clickAndInputLoginFieldAndClickTAB(String loginData) {
+
         try {
             web.clickElement("loginFieldInput");
             web.clear("loginFieldInput");
@@ -93,6 +108,7 @@ public class LoginPage extends Page {
         } catch (ElementNoSuch e) {
             e.printStackTrace();
         }
+
     }
 
     /**
@@ -102,6 +118,7 @@ public class LoginPage extends Page {
      * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public void clickAndInputPassFieldWithOneLocator(String passwordData) {
+
         try {
             web.clickElement("passFieldInputSecond");
             isBeCleaned("passFieldInputSecond");
@@ -109,6 +126,7 @@ public class LoginPage extends Page {
         } catch (ElementNoSuch e) {
             e.printStackTrace();
         }
+
     }
 
     /**
@@ -118,6 +136,7 @@ public class LoginPage extends Page {
      * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public void clickAndInputPassFieldWithTwoLocators(String passwordData) {
+
         try {
             web.clickElement("passFieldInputFirst");
             isBeCleaned("passFieldInputSecond");
@@ -125,6 +144,7 @@ public class LoginPage extends Page {
         } catch (ElementNoSuch e) {
             e.printStackTrace();
         }
+
     }
 
     /**
@@ -133,12 +153,14 @@ public class LoginPage extends Page {
      * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public void clickLoginButton() {
+
         try {
             web.clickElement("loginButton");
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -147,12 +169,14 @@ public class LoginPage extends Page {
      * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public void clickToLoginPageText() {
+
         try {
             web.clickElement("loginPageText");
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -161,12 +185,14 @@ public class LoginPage extends Page {
      * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public void closeHelpBox() {
+
         try {
             web.clickElement("closeHelpBox");
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -176,17 +202,22 @@ public class LoginPage extends Page {
      * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public boolean isErrorMessagePresentOnPage() {
+
         try {
+
             if (web.isElementPresent("errorMessage")) {
                 return true;
             } else {
                 return false;
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
         return false;
+
     }
 
     /**
@@ -196,17 +227,22 @@ public class LoginPage extends Page {
      * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public boolean isErrorMessageOneFieldEmpty() {
+
         try {
+
             if (web.isElementPresent("errorMessageOneFieldEmpty")) {
                 return true;
             } else {
                 return false;
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
         return false;
+
     }
 
     /**
@@ -216,17 +252,22 @@ public class LoginPage extends Page {
      * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public boolean isErrorMessageFieldsEmpty() {
+
         try {
+
             if (web.isElementPresent("errorMessageEmptyFields")) {
                 return true;
             } else {
                 return false;
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
         return false;
+
     }
 
     /**
@@ -236,17 +277,22 @@ public class LoginPage extends Page {
      * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public boolean isHelpBoxActive() {
+
         try {
+
             if (web.isElementPresent("closeHelpBox")) {
                 return true;
             } else {
                 return false;
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
         return false;
+
     }
 
     /**
@@ -266,13 +312,17 @@ public class LoginPage extends Page {
      * @throws ElementNoSuch IOException {@link utils.WebElementsActions}
      */
     private void isBeCleaned(String clearLocator) {
+
         try {
+
             if (!clearLocator.isEmpty()) {
                 web.clear(clearLocator);
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
         }
+
     }
 
 }

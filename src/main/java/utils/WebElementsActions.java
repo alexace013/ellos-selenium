@@ -17,14 +17,18 @@ import java.util.List;
 public class WebElementsActions {
 
     private final static Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
+
     private static WebDriverWait driverWait;
     private ConfigurationData config;
     private WebDriverWrapper driverWrapper;
 
     public WebElementsActions(WebDriverWrapper driverWrapper) {
+
         this.driverWrapper = driverWrapper;
-        driverWait = new WebDriverWait(driverWrapper, 10);
+        driverWait = new WebDriverWait(driverWrapper,
+                Integer.parseInt(PropertyLoader.loadProperty("wait.timeout")));
         config = ConfigurationData.getConfigurationData();
+
     }
 
     /**
@@ -36,8 +40,10 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public WebElement getElement(String elementLocator) throws ElementNoSuch {
+
         log.info(String.format("get element < %s >", elementLocator));
         return driverWrapper.findElement(config.getLocator(elementLocator));
+
     }
 
     /**
@@ -46,8 +52,10 @@ public class WebElementsActions {
      * @param url url{@see uniform resource locator} of the page
      */
     public void openPage(String url) {
+
         driverWrapper.get(url);
         log.info(String.format("browser open page < %s >" + url));
+
     }
 
     /**
@@ -58,8 +66,10 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public void input(String inputLocator, String data) throws ElementNoSuch {
+
         driverWrapper.findElement(config.getLocator(inputLocator)).sendKeys(data);
         log.info(String.format("input < %s > and send < %s >", inputLocator, data));
+
     }
 
     /**
@@ -69,8 +79,10 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public void clear(String clearLocator) throws ElementNoSuch {
+
         driverWrapper.findElement(config.getLocator(clearLocator)).clear();
         log.info(String.format("clear element < %s >", clearLocator));
+
     }
 
     /**
@@ -81,9 +93,11 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public void clearAndInput(String inputLocator, String inputData) throws ElementNoSuch {
+
         driverWrapper.findElement(config.getLocator(inputLocator)).clear();
         driverWrapper.findElement(config.getLocator(inputLocator)).sendKeys(inputData);
         log.info(String.format("clear < %s > and input < %s >", inputLocator, inputData));
+
     }
 
     /**
@@ -95,10 +109,12 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public void clearAndInputAndClickEnter(String inputLocator, String inputData) throws ElementNoSuch {
+
         driverWrapper.findElement(config.getLocator(inputLocator)).clear();
         driverWrapper.findElement(config.getLocator(inputLocator)).sendKeys(inputData);
         driverWrapper.findElement(config.getLocator(inputLocator)).sendKeys(Keys.ENTER);
         log.info(String.format("clear < %s > and send < %s > and click ENTER.", inputLocator, inputData));
+
     }
 
     /**
@@ -108,8 +124,10 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public void clickElement(String elementLocator) throws ElementNoSuch {
+
         driverWrapper.findElement(config.getLocator(elementLocator)).click();
         log.info(String.format("click element < %s >", elementLocator));
+
     }
 
     /**
@@ -119,8 +137,10 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public void clickButton(String buttonLocator) throws ElementNoSuch {
+
         driverWrapper.findElement(config.getLocator(buttonLocator)).click();
         log.info(String.format("click on button < %s >", buttonLocator));
+
     }
 
     /**
@@ -130,8 +150,10 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public void clickLink(String linkLocator) throws ElementNoSuch {
+
         driverWrapper.findElement(config.getLocator(linkLocator)).click();
         log.info(String.format("click on link < %s >", linkLocator));
+
     }
 
     /**
@@ -141,11 +163,13 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public void moveToElement(String moveToLocator) throws ElementNoSuch {
+
         WebElement webElement = driverWrapper.findElement(config.getLocator(moveToLocator));
         Actions actions = new Actions(driverWrapper.getOriginalDriver());
         actions.moveToElement(webElement);
         log.info(String.format("move to element < %s >", moveToLocator));
         actions.perform();
+
     }
 
     /**
@@ -156,12 +180,14 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public void moveToElementAndClick(String moveToLocator, String clickToElement) throws ElementNoSuch {
+
         WebElement webElement = driverWrapper.findElement(config.getLocator(moveToLocator));
         Actions actions = new Actions(driverWrapper.getOriginalDriver());
         actions.moveToElement(webElement);
         log.info(String.format("move to element < %s >", moveToLocator));
         actions.perform();
         clickElement(clickToElement);
+
     }
 
     /**
@@ -171,10 +197,12 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public void selectCheckBox(String checkBoxLocator) throws ElementNoSuch {
+
         if (driverWrapper.findElement(config.getLocator(checkBoxLocator)).isSelected()) {
             driverWrapper.findElement(config.getLocator(checkBoxLocator)).click();
             log.info(String.format("select < %s >", checkBoxLocator));
         }
+
     }
 
     /**
@@ -185,16 +213,19 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public void selectCheckBox(String checkBoxLocator, boolean isCheckBoxSelect) throws ElementNoSuch {
+
         if (driverWrapper.findElement(config.getLocator(checkBoxLocator)).isSelected() &
                 isCheckBoxSelect == false) {
             driverWrapper.findElement(config.getLocator(checkBoxLocator)).click();
             log.info(String.format("check box < %s > selected < %b >", checkBoxLocator, isCheckBoxSelect));
         }
+
         if (!driverWrapper.findElement(config.getLocator(checkBoxLocator)).isSelected() &
                 isCheckBoxSelect == true) {
             driverWrapper.findElement(config.getLocator(checkBoxLocator)).click();
             log.info(String.format("check box < %s > selected < %b >", checkBoxLocator, isCheckBoxSelect));
         }
+
     }
 
     /**
@@ -205,12 +236,15 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public boolean isElementPresent(String elementLocator) throws ElementNoSuch {
+
         if (!driverWrapper.findElement(config.getLocator(elementLocator)).isDisplayed()) {
             log.info(String.format("< %s > not present on page.", elementLocator));
             return false;
         }
+
         log.info(String.format("< %s > is present on page.", elementLocator));
         return true;
+
     }
 
     /**
@@ -220,7 +254,9 @@ public class WebElementsActions {
      * @throws AlertException If alert is not found on page
      */
     public boolean isAlertPresentAndAccept() {
+
         boolean isAlertPresent = false;
+
         try {
             Alert alert = driverWrapper.switchTo().alert();
             alert.accept();
@@ -231,8 +267,10 @@ public class WebElementsActions {
             log.error(String.format("alert is not found. NoAlertPresentException < %s >", e.getMessage()));
             return isAlertPresent;
         }
+
         log.info(String.format("success, alert no present on page"));
         return isAlertPresent;
+
     }
 
     /**
@@ -242,7 +280,9 @@ public class WebElementsActions {
      * @throws AlertException If alert is not found on page
      */
     public String getAlertText() {
+
         String alertText;
+
         try {
             Alert alert = driverWrapper.switchTo().alert();
             alertText = alert.getText();
@@ -253,7 +293,9 @@ public class WebElementsActions {
             log.error(String.format("< %s > . NoAlertPresentException < %s >", alertText, e.getMessage()));
             e.printStackTrace();
         }
+
         return alertText;
+
     }
 
     /**
@@ -272,8 +314,10 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public void waitElementNotVisible(String elementLocator, int timeoutSeconds) throws ElementNoSuch {
+
         WebDriverWait webDriverWait = new WebDriverWait(driverWrapper, timeoutSeconds);
         webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated(config.getLocator(elementLocator)));
+
     }
 
     /**
@@ -288,6 +332,7 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public boolean waitForElementPresent(String elementLocator) throws ElementNoSuch {
+
         if (elementLocator != null) {
             driverWait.until(ExpectedConditions.
                     visibilityOfElementLocated(config.getLocator(elementLocator)));
@@ -298,6 +343,7 @@ public class WebElementsActions {
                     "wait for element < %s > present", elementLocator, elementLocator));
             return false;
         }
+
     }
 
     /**
@@ -309,6 +355,7 @@ public class WebElementsActions {
      * @throws IOException If the locator cannot found
      */
     public boolean waitElementToBeClickable(String elementLocator) throws ElementNoSuch {
+
         if (driverWait.until(ExpectedConditions.
                 elementToBeSelected(config.getLocator(elementLocator)))) {
             driverWait.until(ExpectedConditions.
@@ -316,8 +363,10 @@ public class WebElementsActions {
             log.info(String.format("wait element < %s > to be clickable", elementLocator));
             return true;
         }
+
         log.info(String.format("wait element < %s > not to be clickable", elementLocator));
         return false;
+
     }
 
     /**
@@ -327,22 +376,30 @@ public class WebElementsActions {
      * @return true If {@param driver} instanceof {@link JavascriptExecutor},otherwise false
      */
     public boolean waitForAjaxResponse(int timeoutSeconds) {
+
         if (driverWrapper instanceof JavascriptExecutor) {
             JavascriptExecutor jsDriver = (JavascriptExecutor) driverWrapper;
+
             for (int i = 0; i < timeoutSeconds; i++) {
                 Long numberOfConnections = (Long) jsDriver.executeScript("return jQuery.active");
+
                 if (numberOfConnections instanceof Long) {
                     log.debug(String.format("number of active jQuery Ajax calls is < %d >", numberOfConnections));
+
                     if (numberOfConnections == 0) {
                         break;
                     }
                 }
+
             }
+
             return true;
+
         } else {
             log.info(String.format("web elements actions driver: < %s > can't execute JavaScript", driverWrapper));
             return false;
         }
+
     }
 
     /**
@@ -354,8 +411,10 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public List<WebElement> getElements(String elementLocator) throws ElementNoSuch {
+
         log.info(String.format("get elements < %s >", elementLocator));
         return driverWrapper.findElements(config.getLocator(elementLocator));
+
     }
 
     /**
@@ -366,9 +425,11 @@ public class WebElementsActions {
      * @throws ElementNoSuch If the locator cannot found
      */
     public void pressTAB(String locator) throws ElementNoSuch {
+
         WebElement webElement = driverWrapper.findElement(config.getLocator(String.valueOf(locator)));
         webElement.sendKeys(Keys.TAB);
         log.info(String.format("press TAB"));
+
     }
 
     /**
@@ -378,9 +439,11 @@ public class WebElementsActions {
      * @see {@link Keys#SPACE}
      */
     public void pressSpace(String locator) throws ElementNoSuch {
+
         WebElement webElement = driverWrapper.findElement(config.getLocator(locator));
         webElement.sendKeys(Keys.SPACE);
         log.info(String.format("press space"));
+
     }
 
     /**
@@ -389,9 +452,11 @@ public class WebElementsActions {
      * @see {@link JavascriptExecutor} and {@link JavascriptExecutor#executeScript(String, Object...)}
      */
     public void windowScrollDown() {
+
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driverWrapper.getOriginalDriver();
         // Vertical scroll - down by 200  pixels
         javascriptExecutor.executeScript("window.scrollBy(0,200)", "");
+
     }
 
     /**
@@ -400,8 +465,11 @@ public class WebElementsActions {
      * @see {@link JavascriptExecutor} and {@link JavascriptExecutor#executeScript(String, Object...)}
      */
     public void windowScrollUp() {
+
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driverWrapper.getOriginalDriver();
         // Vertical scroll - up by -200  pixels
         javascriptExecutor.executeScript("window.scrollBy(0,-200)", "");
+
     }
+
 }

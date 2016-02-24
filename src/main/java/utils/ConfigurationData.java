@@ -20,7 +20,9 @@ import java.util.Properties;
 public class ConfigurationData {
 
     private static final Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
+
     private static final String UI_MAPPING_PATH = "src/main/resources/UIMapping.properties";
+
     private static ConfigurationData config;
     private final Properties PROPERTIES;
     private Map<String, String> propertiesMap;
@@ -31,8 +33,10 @@ public class ConfigurationData {
      * @throws IOException throw exception in {@link ConfigurationData#loadPropertiesToMap()}
      */
     private ConfigurationData() {
+
         this.PROPERTIES = new Properties();
         log.info(String.format("created properties"));
+
         try {
             this.propertiesMap = loadPropertiesToMap();
             log.info(String.format("created map properties"));
@@ -40,6 +44,7 @@ public class ConfigurationData {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -48,16 +53,19 @@ public class ConfigurationData {
      * @return new object Configuration Data {@link ConfigurationData#config}
      */
     public static ConfigurationData getConfigurationData() {
+
         if (config == null) {
             config = new ConfigurationData();
         }
+
         return config;
+
     }
 
     /**
      * Private method for loaded properties to the map {@link ConfigurationData#propertiesMap}
      *
-     * @return {@link HashMap<String, String> with {@value PROPERTIES}} If file is not exists and
+     * @return {@link HashMap <String, String> with {@value PROPERTIES}} If file is not exists and
      * path correct, otherwise {@link FileException}
      * @throws ElementNoSuch    If {@link FileInputStream not opening a connection to an actual
      *                          file {@value UI_MAPPING_PATH}}
@@ -68,9 +76,12 @@ public class ConfigurationData {
      *                          {@link Properties#load(InputStream)}
      * @throws IOException      this exception throw method {@link Properties#load(InputStream)}
      */
-    private Map<String, String> loadPropertiesToMap() throws ElementNoSuch, FileException, PropertiesNoLoad {
+    private Map<String, String> loadPropertiesToMap()
+            throws ElementNoSuch, FileException, PropertiesNoLoad {
+
         if (Files.exists(Paths.get(UI_MAPPING_PATH))) {
             FileInputStream fileInputStream = null;
+
             try {
                 fileInputStream = new FileInputStream(UI_MAPPING_PATH);
                 PROPERTIES.load(fileInputStream);
@@ -79,11 +90,14 @@ public class ConfigurationData {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
         } else {
             throw new ElementNoSuch(
                     String.format("< %s > not found exception", UI_MAPPING_PATH.substring(13)));
         }
+
         return propertiesMap = new HashMap<String, String>((Map) PROPERTIES);
+
     }
 
     /**
@@ -93,7 +107,9 @@ public class ConfigurationData {
      * @return string locator with parameters from {@fileProperties UIMapping.properties}
      */
     private String getPropertyValue(String key) {
+
         return propertiesMap.get(key);
+
     }
 
     /**
@@ -104,9 +120,11 @@ public class ConfigurationData {
      * @throws {@link ElementNoSuch}
      */
     public By getLocator(String key) throws ElementNoSuch {
+
         String[] partsOfLocators = getPropertyValue(key).split("\"");
         String findMethod = partsOfLocators[0].substring(0, partsOfLocators[0].length() - 1);
         String locator = partsOfLocators[1];
+
         switch (findMethod) {
             case "id":
                 return By.id(locator);
@@ -128,6 +146,7 @@ public class ConfigurationData {
                 throw new ElementNoSuch(
                         String.format("Locator < %s >  not defined!", locator));
         }
+
     }
 
 }

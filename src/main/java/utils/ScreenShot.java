@@ -23,15 +23,18 @@ public class ScreenShot {
 
     private static final String DEFAULT_FILE_PATH = PropertyLoader.loadProperty("screenshot.folder");
     private static final String DEFAULT_FILE_FORMAT = PropertyLoader.loadProperty("screenshot.defaultFormat");
+
     private WebDriverWrapper driverWrapper;
     private String defaultFileName;
     private File screenShotFile;
 
     public ScreenShot(WebDriverWrapper driverWrapper) {
+
         this.driverWrapper = driverWrapper;
         this.defaultFileName = createDefaultFileName();
         // create screen shot.
         screenShotFile = (driverWrapper).getScreenshotAs(OutputType.FILE);
+
     }
 
     /**
@@ -47,6 +50,7 @@ public class ScreenShot {
      */
     public static void quicklyScreenShot(WebDriverWrapper driverWrapper, String filePath,
                                          String fileName, String fileFormat) throws IOException {
+
         // generate random value for saved all screen shot file, where used this method
         int rand = new Random().nextInt();
         // the path, where to save screenshot and file name and file format
@@ -54,6 +58,7 @@ public class ScreenShot {
         File screenShotFile = ((TakesScreenshot) driverWrapper.getOriginalDriver()).
                 getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(screenShotFile, new File(path));
+
     }
 
     /**
@@ -62,7 +67,9 @@ public class ScreenShot {
      * @return string name with random numbers
      */
     private String createDefaultFileName() {
+
         return "scr_" + (new Random().nextInt(10_000));
+
     }
 
     /**
@@ -73,9 +80,11 @@ public class ScreenShot {
      *                     throw exception
      */
     public void makeScreenShot() {
+
         // final file with defaupt path name and format.
         String path = DEFAULT_FILE_PATH + defaultFileName + DEFAULT_FILE_FORMAT;
         saveScreenShot(path);
+
     }
 
     /**
@@ -87,8 +96,10 @@ public class ScreenShot {
      *                     throw exception
      */
     public void makeScreenShot(String filePath) {
+
         String path = filePath + defaultFileName + DEFAULT_FILE_FORMAT;
         saveScreenShot(path);
+
     }
 
     /**
@@ -101,8 +112,10 @@ public class ScreenShot {
      *                     throw exception
      */
     public void makeScreenShot(String filePath, String fileName) {
+
         String path = filePath + fileName + DEFAULT_FILE_FORMAT;
         saveScreenShot(path);
+
     }
 
     /**
@@ -116,8 +129,10 @@ public class ScreenShot {
      *                     throw exception
      */
     public void makeScreenShot(String filePath, String fileName, String fileFormat) {
+
         String path = filePath + fileName + fileFormat;
         saveScreenShot(path);
+
     }
 
     /**
@@ -126,11 +141,13 @@ public class ScreenShot {
      * @param path input path, where save screen sot
      */
     private void saveScreenShot(String path) {
+
         try {
             FileUtils.copyFile(screenShotFile, new File(path));
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
 }

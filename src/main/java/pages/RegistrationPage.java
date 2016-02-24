@@ -12,13 +12,14 @@ import utils.WebElementsActions;
  */
 public class RegistrationPage extends Page {
 
-    //    private final static Logger log = Logger.getLogger("log4j.rootLogger");
     private static final Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
-    private static final String MAIN_PAGE = PropertyLoader.loadProperty("site.url");
+    private static final String MAIN_PAGE = PropertyLoader.loadProperty("registration.url");
 
     public RegistrationPage(WebDriverWrapper driverWrapper) {
+
         super(driverWrapper, MAIN_PAGE);
         openPage();
+
     }
 
     /**
@@ -30,6 +31,7 @@ public class RegistrationPage extends Page {
      *                       {@link WebElementsActions#input(String, String)}
      */
     public void clickAndInputEmailMain(String email) {
+
         try {
             web.clickElement("registrationEmailMain");
             web.clear("registrationEmailMain");
@@ -38,6 +40,7 @@ public class RegistrationPage extends Page {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -50,6 +53,7 @@ public class RegistrationPage extends Page {
      *                       {@link WebElementsActions#pressTAB(String)}
      */
     public void clickAndInputEmailRepeatAndClickTAB(String email) {
+
         try {
             web.clickElement("registrationEmailRepeat");
             web.clear("registrationEmailRepeat");
@@ -59,6 +63,7 @@ public class RegistrationPage extends Page {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -71,6 +76,7 @@ public class RegistrationPage extends Page {
      *                       {@link WebElementsActions#pressTAB(String)}
      */
     public void clickAndInputPassMainAndClickTAB(String password) {
+
         try {
             web.clickElement("registrationPassMain");
             web.clear("registrationPassMain");
@@ -80,6 +86,7 @@ public class RegistrationPage extends Page {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -91,6 +98,7 @@ public class RegistrationPage extends Page {
      *                       {@link WebElementsActions#input(String, String)}
      */
     public void clickAndInputPassRepeat(String password) {
+
         try {
             web.clickElement("registrationPassRepeat");
             web.clear("registrationPassRepeat");
@@ -99,6 +107,7 @@ public class RegistrationPage extends Page {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -112,6 +121,7 @@ public class RegistrationPage extends Page {
      */
     @Deprecated
     public void clickAndInputPassRepeatTest(String password) {
+
         try {
             web.clickElement("registrationPassRepeat");
             web.clear("registrationPassRepeat");
@@ -120,20 +130,25 @@ public class RegistrationPage extends Page {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
      * This method scroll you window in down
      */
     public void regPageScrollDown() {
+
         web.windowScrollDown();
+
     }
 
     /**
      * This method scroll you window in up
      */
     public void regPageScrollUp() {
+
         web.windowScrollUp();
+
     }
 
     /**
@@ -142,25 +157,31 @@ public class RegistrationPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)}
      */
     public void clickCheckBox() {
+
         try {
             web.clickElement("checkBoxAccept");
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     public void closeHelpBox() {
+
         if (web.isElementPresent("helpRegWindow")) {
+
             try {
                 web.clickElement("closeHelpRegWindow");
             } catch (ElementNoSuch e) {
                 e.printStackTrace();
                 log.error(String.format("Exception < %s >", e.getStackTrace()));
             }
+
         } else {
             log.info(String.format("help window no present"));
         }
+
     }
 
     /**
@@ -169,12 +190,14 @@ public class RegistrationPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)}
      */
     public void clickButtonRegistration() {
+
         try {
             web.clickElement("buttonRegistration");
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -184,12 +207,14 @@ public class RegistrationPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)}
      */
     public void clickLogin() {
+
         try {
             web.clickLink("loginLink");
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -199,12 +224,14 @@ public class RegistrationPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)}
      */
     public void clickLogOut() {
+
         try {
             web.clickLink("logoutLink");
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -234,15 +261,20 @@ public class RegistrationPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
      */
     public boolean isErrorPassPresent() {
+
         try {
+
             if (web.isElementPresent("errorRegPassFieldOne")) {
                 return true;
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
         return false;
+
     }
 
     /**
@@ -253,15 +285,20 @@ public class RegistrationPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
      */
     public boolean isErrorJustOneField() {
+
         try {
+
             if (web.isElementPresent("errorRegJustFirstEmail")) {
                 return true;
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
         return false;
+
     }
 
     /**
@@ -271,15 +308,20 @@ public class RegistrationPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
      */
     public boolean isErrorMessagePresent() {
+
         try {
+
             if (web.isElementPresent("errorRegMessage")) {
                 return true;
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
         return false;
+
     }
 
     /**
@@ -289,17 +331,21 @@ public class RegistrationPage extends Page {
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void switchToRegisterCustomer() {
+
         try {
+
             if (web.isElementPresent("isCheckOutRegistration")) {
                 web.moveToElementAndClick("buttonCheckOutRegistration", "buttonCheckOutRegistration");
                 log.info(String.format("switch to full registration page"));
             } else {
                 log.info(String.format("no switch to full registration page"));
             }
+
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
@@ -308,19 +354,23 @@ public class RegistrationPage extends Page {
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)}
      */
     public void switchToHomePage() {
+
         try {
             web.moveToElementAndClick("ellosLink", "ellosLink");
         } catch (ElementNoSuch e) {
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
+
     }
 
     /**
      * Refresh the home page
      */
     public void refreshRegistrationPage() {
+
         web.refreshPage();
+
     }
 
 }

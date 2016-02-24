@@ -41,11 +41,11 @@ public class TestClass {
 
 
     private Object generateRandomPassword() {
-        return PropertyLoader.loadProperty("user.new.PASS") + randomValue();
+        return PropertyLoader.loadProperty("user.new.password") + randomValue();
     }
 
     private Object generateRandomEmail() {
-        return PropertyLoader.loadProperty("user.new.EMAIL") + randomValue() + PropertyLoader.loadProperty("user.new.EMAIL.domain");
+        return PropertyLoader.loadProperty("user.new.email") + randomValue() + PropertyLoader.loadProperty("user.new.email.domain");
     }
 
     private int randomValue() {

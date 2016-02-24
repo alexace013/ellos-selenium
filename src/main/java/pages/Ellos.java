@@ -14,6 +14,7 @@ public class Ellos {
 //    public Mock mock;
 
     public Ellos(WebDriverWrapper driverWrapper) {
+
         homePage = new HomePage(driverWrapper);
         loginPage = new LoginPage(driverWrapper);
         productPage = new ProductPage(driverWrapper);
@@ -22,5 +23,6 @@ public class Ellos {
         mycabinetPage = new MyCabinetPage(driverWrapper);
         //screenShotMaker = new ScreenShotMaker(driverWrapper);
         //mock = new Mock(driverWrapper);
+
     }
 }
