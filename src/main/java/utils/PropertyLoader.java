@@ -12,7 +12,7 @@ public class PropertyLoader {
     /**
      * Public static synchronized method for load property from {@value PROPERTY_FILE}
      *
-     * @param name parameter to the indicate which browser will be selected as the driver
+     * @param name parameter to the indicate which browser will be selected as the driverWrapper
      * @return {@link String#valueOf(Object)}
      */
     public static synchronized String loadProperty(String name) {

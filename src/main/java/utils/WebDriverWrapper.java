@@ -127,7 +127,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
     }
 
     /**
-     * Quits this driver, closing every associated window.
+     * Quits this driverWrapper, closing every associated window.
      */
     @Override
     public void quit() {
@@ -153,10 +153,10 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
 
     /**
      * Return an opaque handle to this window that uniquely
-     * identifies it within this driver instance.
+     * identifies it within this driverWrapper instance.
      *
      * @return {@link String} Return an opaque handle to this
-     * window that uniquely identifies it within this driver instance.
+     * window that uniquely identifies it within this driverWrapper instance.
      * This can be used to switch to this window at a later date.
      */
     @Override
@@ -180,7 +180,7 @@ public class WebDriverWrapper implements WebDriver, TakesScreenshot {
     }
 
     /**
-     * An abstraction allowing the driver to access the browser's
+     * An abstraction allowing the driverWrapper to access the browser's
      * history and to navigate to a given URL.
      *
      * @return {@link org.openqa.selenium.WebDriver.Navigation}

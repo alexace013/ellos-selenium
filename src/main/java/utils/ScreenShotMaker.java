@@ -11,10 +11,10 @@ import java.io.IOException;
 public class ScreenShotMaker {
 
     private static String screenShotDirectory;
-    protected WebDriverWrapper driver;
+    protected WebDriverWrapper driverWrapper;
 
     public ScreenShotMaker(WebDriverWrapper driverWrapper) {
-        this.driver = driverWrapper;
+        this.driverWrapper = driverWrapper;
         screenShotDirectory = PropertyLoader.loadProperty("screenshot.folder");
         File scrDir = new File(screenShotDirectory);
         if (!scrDir.exists()) {
@@ -40,11 +40,11 @@ public class ScreenShotMaker {
 
     public void takeScreenShot(String scrName) {
 
-        String scrFormat = PropertyLoader.loadProperty("screenshot.defaultFormat");
+        String scrFormat = PropertyLoader.loadProperty("screenshot.format");
 
         try {
             Augmenter augmenter = new Augmenter();
-            File scrFile = ((TakesScreenshot) augmenter.augment(driver)).getScreenshotAs(OutputType.FILE);
+            File scrFile = ((TakesScreenshot) augmenter.augment(driverWrapper)).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(scrFile, new File(screenShotDirectory + scrName + scrFormat));
         } catch (Exception e) {
             e.printStackTrace();

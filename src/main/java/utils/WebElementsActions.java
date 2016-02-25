@@ -35,7 +35,7 @@ public class WebElementsActions {
      * This method return the desired element with locator
      *
      * @param elementLocator search element locator
-     * @return element {@link WebElement} driver from
+     * @return element {@link WebElement} driverWrapper from
      * configuration {@link WebElementsActions#config}
      * @throws ElementNoSuch If the locator cannot found
      */
@@ -373,7 +373,7 @@ public class WebElementsActions {
      * This method is used to wait for getting response from all Ajax requests
      *
      * @param timeoutSeconds the timeout in seconds when an expectation is called
-     * @return true If {@param driver} instanceof {@link JavascriptExecutor},otherwise false
+     * @return true If {@param driverWrapper} instanceof {@link JavascriptExecutor},otherwise false
      */
     public boolean waitForAjaxResponse(int timeoutSeconds) {
 
@@ -396,7 +396,7 @@ public class WebElementsActions {
             return true;
 
         } else {
-            log.info(String.format("web elements actions driver: < %s > can't execute JavaScript", driverWrapper));
+            log.info(String.format("web elements actions driverWrapper: < %s > can't execute JavaScript", driverWrapper));
             return false;
         }
 
@@ -406,7 +406,7 @@ public class WebElementsActions {
      * This method return a list of elements
      *
      * @param elementLocator search element locator
-     * @return elements {@link List<WebElement>} driver find elements from
+     * @return elements {@link List<WebElement>} driverWrapper find elements from
      * configuration {@link WebElementsActions#config}
      * @throws ElementNoSuch If the locator cannot found
      */

@@ -19,7 +19,7 @@ public abstract class Page {
     /**
      * Page constructor with two parameters
      *
-     * @param driverWrapper the driver that is used on the page
+     * @param driverWrapper the driverWrapper that is used on the page
      * @param page          the page URL
      */
     public Page(WebDriverWrapper driverWrapper, String page) {
@@ -33,7 +33,7 @@ public abstract class Page {
     /**
      * Page constructor with one parameter
      *
-     * @param driverWrapper the driver that is used on the page
+     * @param driverWrapper the driverWrapper that is used on the page
      */
     public Page(WebDriverWrapper driverWrapper) {
 

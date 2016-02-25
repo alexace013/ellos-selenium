@@ -1,6 +1,6 @@
 package pages;
 
-import utils.ScreenShotMaker;
+import utils.ScreenShot;
 import utils.WebDriverWrapper;
 
 public class Ellos {
@@ -11,7 +11,8 @@ public class Ellos {
     public CheckoutPage checkoutPage;
     public RegistrationPage registrationPage;
     public MyCabinetPage mycabinetPage;
-    public ScreenShotMaker screenShotMaker;
+//    public ScreenShotMaker screenShotMaker;
+    public ScreenShot screenShot;
 //    public Mock mock;
 
     public Ellos(WebDriverWrapper driverWrapper) {
@@ -22,7 +23,8 @@ public class Ellos {
         checkoutPage = new CheckoutPage(driverWrapper);
         mycabinetPage = new MyCabinetPage(driverWrapper);
         registrationPage = new RegistrationPage(driverWrapper);
-        screenShotMaker = new ScreenShotMaker(driverWrapper);
+//        screenShotMaker = new ScreenShotMaker(driverWrapper);
+        screenShot = new ScreenShot(driverWrapper);
 
         //mock = new Mock(driverWrapper);
 

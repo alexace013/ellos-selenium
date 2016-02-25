@@ -84,7 +84,7 @@ public class WebDriverFactory {
         if (CHROME.equals(browserName)) {
             capabilities.setBrowserName(browserName);
             capabilities = DesiredCapabilities.chrome();
-            System.setProperty("webdriver.chrome.driver", PropertyLoader.loadProperty("chromedriver.path"));
+            System.setProperty("webdriver.chrome.driverWrapper", PropertyLoader.loadProperty("chromedriver.path"));
             capabilities.setCapability("chrome.switches",
                     Arrays.asList("--ignore-certificate-errors"));
             capabilities.setCapability(CapabilityType.SUPPORTS_APPLICATION_CACHE, true);
