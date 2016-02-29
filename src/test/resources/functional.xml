@@ -5,7 +5,7 @@
             <class name="tests.LoginTests"/>
             <class name="tests.RegistrationTests"/>
             <class name="tests.ProductPageTests"/>
-            <!--<class name="tests.ProductAddToBasketTests"/>-->
+            <class name="tests.ProductAddToBasketTests"/>
             <!--<class name="tests.CheckOutTests"/>-->
         </classes>
     </test>

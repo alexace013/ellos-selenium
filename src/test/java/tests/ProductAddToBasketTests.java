@@ -1,6 +1,7 @@
 package tests;
 
 import org.apache.log4j.Logger;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.ClassNameUtil;
@@ -21,31 +22,24 @@ public class ProductAddToBasketTests extends Fixture {
 
         log.info(String.format("\ntest1_addFirstProduct\n"));
 
-//        if (ellos.registrationPage.openPage()) {
-//            ellos.registrationPage.switchToHomePage();
-//        }
-
         ellos.homePage.closeBlurb();
-        ellos.homePage.refreshHomePage();
         ellos.homePage.switchToElectronicPage();
-//        getBasketPage().switchToMobile();
         ellos.productPage.switchToSecondPositionCategory();
         ellos.productPage.switchToFirstPositionCategory();
+        Assert.assertTrue(ellos.productPage.textPresent(), "success product page");
         ellos.productPage.addProductToBasket();
         ellos.screenShot.makeScreenShot();
         ellos.productPage.switchToHomePage();
-//        Assert.assertTrue(getProductPage().textPresent(), "success page with iPhone 6 Plus 16GB Space Gray");
 
     }
 
     @Test
     public void test2_addSecondProduct() {
 
-        log.info(String.format("test2_addSecondProduct"));
+        log.info(String.format("\ntest2_addSecondProduct\n"));
 
         ellos.homePage.switchToManPage();
         ellos.productPage.switchToProductCategory();
-//        getProductPage().switchToFirstPositionCategory();
         ellos.productPage.switchToFirstPositionCategory();
         ellos.productPage.selectColor();
         ellos.productPage.selectSize();
@@ -56,7 +50,7 @@ public class ProductAddToBasketTests extends Fixture {
 
     }
 
-    @Test
+    @Test(enabled = false)
     public void test3_addThirdProduct() {
 
         // TODO must be *XL size
