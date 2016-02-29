@@ -59,8 +59,7 @@ public class RegistrationTests extends Fixture {
 
         log.info(String.format("\ntest1_positiveRegistration\n"));
 
-//        ellos.homePage.closeBlurb();
-//        ellos.homePage.clickLoginLink();
+        ellos.registrationPage.openPage();
         ellos.registrationPage.clickAndInputEmailMain(email);
         log.info(String.format("click and input %s in email field", email));
         ellos.registrationPage.clickAndInputEmailRepeatAndClickTAB(email);
@@ -68,15 +67,12 @@ public class RegistrationTests extends Fixture {
         ellos.registrationPage.clickAndInputPassMainAndClickTAB(PASS);
         log.info(String.format("click and input %s in password field and click TAB", PASS));
         ellos.registrationPage.clickAndInputPassRepeat(PASS);
-//            ellos.registrationPage.clickAndInputPassRepeatTest(PASS);
         log.info(String.format("click and input %s password field repeat", PASS));
         ellos.registrationPage.clickButtonRegistration();
         log.info(String.format("click on registration button"));
         Assert.assertTrue(ellos.registrationPage.isRegistrationSuccessful(),
                 "registration is successful");
         ellos.homePage.clickLogoutLink();
-//        log.info(String.format("click logout link"));
-        // TODO Felaktig erbjudandekod what is this? (#offerCodeError)
 
     }
 
@@ -86,6 +82,7 @@ public class RegistrationTests extends Fixture {
 
         log.info(String.format("\ntest2_negativeOnlyFirstEmailField\n"));
 
+        ellos.homePage.closeBlurb();
         ellos.homePage.clickLoginLink();
         log.info(String.format("click login link"));
         ellos.registrationPage.clickAndInputEmailMain(email);

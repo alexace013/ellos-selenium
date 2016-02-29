@@ -110,29 +110,6 @@ public class RegistrationPage extends Page {
     }
 
     /**
-     * Method clicked and input data in the second email field (test method), this
-     * method is deprecated
-     *
-     * @param password where this string is the E-mail address
-     * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)} and
-     *                       {@link WebElementsActions#clear(String)} and
-     *                       {@link WebElementsActions#clearAndInputAndClickEnter(String, String)}
-     */
-    @Deprecated
-    public void clickAndInputPassRepeatTest(String password) {
-
-        try {
-            web.clickElement("registrationPassRepeat");
-            web.clear("registrationPassRepeat");
-            web.clearAndInputAndClickEnter("registrationPassRepeat", password);
-        } catch (ElementNoSuch e) {
-            e.printStackTrace();
-            log.error(String.format("Exception < %s >", e.getStackTrace()));
-        }
-
-    }
-
-    /**
      * This method scroll you window in down
      */
     public void regPageScrollDown() {
