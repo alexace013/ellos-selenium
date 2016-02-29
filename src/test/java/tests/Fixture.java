@@ -39,9 +39,7 @@ public class Fixture {
     @AfterSuite
     public void quitBrowser() {
 
-        if (driverWrapper != null) {
-            driverWrapper.quit();
-        }
+        driverWrapper.quit();
 
         log.info(String.format("tests suite execution completed"));
 

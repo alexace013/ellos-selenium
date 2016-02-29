@@ -19,10 +19,7 @@ public class LoginTests extends Fixture {
 
         log.info(String.format("test1_positiveLogin"));
 
-        // this method need if you start from home page
-      /*  ellos.homePage.closeBlurb();
-        log.info(String.format("close blurb"));
-        ellos.homePage.switchToRegistrationPage();*/
+        ellos.loginPage.openPage();
         ellos.loginPage.clickAndInputLoginField(EMAIL);
         log.info(String.format("click and input %s in login filed", EMAIL));
         ellos.loginPage.clickAndInputPassFieldWithTwoLocators(PASS);
