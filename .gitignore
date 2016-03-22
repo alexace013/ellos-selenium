@@ -1,10 +1,14 @@
 target/
 .idea/workspace.xml
+.idea/compiler.xml
+.idea/libraries
+
 
 # Package Files #
 #*.jar
 *.war
 *.ear
+ellos-selenium.iml
 
 # Created by .ignore support plugin (hsz.mobi)
 
